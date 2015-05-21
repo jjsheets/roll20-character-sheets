@@ -321,12 +321,22 @@
       {{/outputall}}
 	  
 	  <!--StatBlock-->
-      {{#AC}}
-        <div class="sheet-row">
-          <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">AC</div>
-          <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{AC}}{{#ACNotes}}, {{ACNotes}}{{/ACNotes}}</div>
-        </div>
-      {{/AC}}
+      {{#rollTotal() NPCTraits 1}}
+		  {{#AC}}
+			<div class="sheet-row">
+			  <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">AC</div>
+			  <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{AC}}{{#ACNotes}}, {{ACNotes}}{{/ACNotes}}</div>
+			</div>
+		  {{/AC}}
+      {{/rollTotal() NPCTraits 1}}
+      {{#rollTotal() NPCTraits 0}}
+		  {{#PCAC}}
+			<div class="sheet-row">
+			  <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">AC</div>
+			  <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{PCAC}}</div>
+			</div>
+		  {{/PCAC}}
+      {{/rollTotal() NPCTraits 0}}
       {{#HP}}
         <div class="sheet-row">
           <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Hit Points</div>
