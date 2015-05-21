@@ -319,6 +319,78 @@
           </div>
         {{/allprops() outputall title subheader subheaderright subheader2 subheaderright2 emote weapon spell ability save deathsave targetAC}}
       {{/outputall}}
+	  
+	  <!--StatBlock-->
+      {{#AC}}
+        <div class="sheet-row">
+          <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">AC</div>
+          <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{AC}}{{#ACNotes}}, {{ACNotes}}{{/ACNotes}}</div>
+        </div>
+      {{/AC}}
+      {{#HP}}
+        <div class="sheet-row">
+          <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Hit Points</div>
+          <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{HP}}{{#HPMax}}/{{HPMax}}{{/HPMax}}{{#HitDice}} ({{HitDice}}){{/HitDice}}</div>
+        </div>
+	  {{/HP}}
+	  {{#Speed}}
+        <div class="sheet-row">
+          <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Speed</div>
+          <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{Speed}} ft.{{#Fly}}, fly {{Fly}} ft.{{/Fly}}{{#Climb}}, climb {{Climb}} ft.{{/Climb}}{{#Swim}}, swim {{Swim}} ft.{{/Swim}}{{#Burrow}}, burrow {{Burrow}} ft.{{/Burrow}}</div>
+        </div>
+	  {{/Speed}}
+      {{#Resistance}}
+        <div class="sheet-row">
+          <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Resists</div>
+          <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{Resistance}}</div>
+        </div>
+      {{/Resistance}}
+      {{#Vulnerability}}
+        <div class="sheet-row">
+          <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Vuln.</div>
+          <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{Vulnerability}}</div>
+        </div>
+      {{/Vulnerability}}
+      {{#Immunity}}
+        <div class="sheet-row">
+          <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Immunities</div>
+          <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{Immunity}}</div>
+        </div>
+      {{/Immunity}}
+      {{#CondImmunity}}
+        <div class="sheet-row">
+          <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Cond. Imm.</div>
+          <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{CondImmunity}}</div>
+        </div>
+      {{/CondImmunity}}
+      {{#PassivePerception}}
+      <div class="sheet-row">
+        <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Senses</div>
+        <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">passive Perception {{PassivePerception}}{{#Darkvision}}, darkvision {{Darkvision}} ft.{{/Darkvision}}{{#Blindsight}}, blindsight {{Blindsight}} ft.{{/Blindsight}}{{#Tremorsense}}, tremorsense {{Tremorsense}} ft.{{/Tremorsense}}{{#Truesight}}, truesight {{Truesight}} ft.{{/Truesight}}</div>
+      </div>
+      {{/PassivePerception}}
+      {{#Languages}}
+        <div class="sheet-row">
+          <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Languages</div>
+          <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{Languages}}</div>
+        </div>
+      {{/Languages}}
+      {{#rollTotal() NPCTraits 1}}
+        {{#Challenge}}
+          <div class="sheet-row">
+            <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Challenge</div>
+            <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{Challenge}}{{#XP}} ({{XP}} XP){{/XP}}</div>
+          </div>
+        {{/Challenge}}
+        <div class="sheet-row">
+          <div class="sheet-col-1 sheet-pad-l-md sheet-pad-r-sm sheet-rt-value">{{Traits}}</div>
+        </div>
+      {{/rollTotal() NPCTraits 1}}
+      {{#rollTotal() NPCTraits 0}}
+        <div class="sheet-row">
+          <div class="sheet-col-1 sheet-pad-l-md sheet-pad-r-sm sheet-rt-value">{{RacialTraits}}</div>
+        </div>
+      {{/rollTotal() NPCTraits 0}}
     </div>
   </div>
 </rolltemplate>
