@@ -103,7 +103,7 @@ function skills (file) {
 	return skills.join('\n\n');
 }
 
-gulp.task('compile', function() {
+gulp.task('default', function() {
 	gulp.src('precompiled/D&D_5e.html')
 		.pipe( include() )
 		.pipe( inject(gulp.src(['precompiled/components/skills/skill.html']), {

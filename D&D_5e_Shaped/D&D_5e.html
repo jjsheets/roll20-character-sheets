@@ -1,10 +1,12 @@
 <div class="sheet-overall-wrapper">
   <input class="sheet-tab-is-npc" type="checkbox" name="attr_is_npc" value="1"><span class="sheet-tab-is-npc"></span>
   <input type="hidden" name="attr_is_pc" value="(1-@{is_npc})">
-  <span class="sheet-last-updated">Sheet version: 21st May 2015</span>  <!--<input class="sheet-tab-language sheet-float-right" type="radio" name="attr_lang" value="Spanish"><span class="sheet-tab-language sheet-spanish sheet-float-right"></span>-->
+  <span class="sheet-last-updated">Sheet version: 21st May 2015</span>
+  <!--<input class="sheet-tab-language sheet-float-right" type="radio" name="attr_lang" value="Spanish"><span class="sheet-tab-language sheet-spanish sheet-float-right"></span>-->
   <input class="sheet-tab-language sheet-float-right" type="radio" name="attr_lang" value="German"><span class="sheet-tab-language sheet-german sheet-float-right"></span>
   <input class="sheet-tab-language sheet-float-right" type="radio" name="attr_lang" value="English" checked="checked"><span class="sheet-tab-language sheet-english sheet-float-right"></span>
-  <div class="sheet-core-header sheet-pad-b-md">
+
+  <div class="sheet-core-header sheet-pad-b-md">
     <div class="sheet-row">
       <div class="sheet-col-3-10">
         <div class="sheet-dnd-image-wrapper sheet-mar-t-sm sheet-mar-b-sm">
@@ -147,7 +149,8 @@
       </div>
     </div>
   </div>
-  <input type="radio" name="attr_tab" class="sheet-tab-page-core" value="core" checked="checked">
+
+  <input type="radio" name="attr_tab" class="sheet-tab-page-core" value="core" checked="checked">
   <span class="sheet-tab-page-core">
     <span class="sheet-english">Core Stats</span>
     <span class="sheet-german">Grundwerte</span>
@@ -200,7 +203,8 @@
     <span class="sheet-german">Alle</span>
   </span>
 
-  <span class="sheet-spacer"></span>  <div class="sheet-section-core">
+  <span class="sheet-spacer"></span>
+  <div class="sheet-section-core">
     <div class="sheet-row">
       <div class="sheet-col-09 sheet-pad-r-sm sheet-attributes">
         <div class="sheet-row">
@@ -2273,7 +2277,8 @@
                     <span class="sheet-german">Automatisches hinzufügen von Boni/Mali zu etlichen Würfen, die mit den Makros ausgeführt werden.<br>Benutzung: du erhälst einen magischen Gegenstand, der dir +1 auf Rettungswürfe gibt, trage eine 1 in das Rettungswurf feld ein.</span>
                   </div>
                 </div>
-              </div>              <div class="sheet-row sheet-sub-header">
+              </div>
+                <div class="sheet-row sheet-sub-header">
                 <div class="sheet-col-1-3 sheet-center sheet-small-label sheet-sub-header">
                   <span class="sheet-english">Weapons</span>
                   <span class="sheet-german">Waffen<!--TODO: German--></span>
@@ -2331,7 +2336,8 @@
                   </div>
                 </div>
               </div>
-                <div class="sheet-row sheet-sub-header">
+  
+                <div class="sheet-row sheet-sub-header">
                 <div class="sheet-col-1 sheet-center sheet-small-label sheet-sub-header">
                   <span class="sheet-english">Spellcasting</span>
                   <span class="sheet-german">Zauber</span>
@@ -2394,7 +2400,8 @@
       <div class="sheet-col-32 sheet-pad-l-sm">
         <div class="sheet-row sheet-quick-attacks sheet-pc-version sheet-mar-b-md">
           <div class="sheet-col-1">
-            <div class="sheet-wrap-box" title="Quick Attacks">              <div class="sheet-row sheet-sub-header">
+            <div class="sheet-wrap-box" title="Quick Attacks">
+                <div class="sheet-row sheet-sub-header">
                 <div class="sheet-col-3545 sheet-center sheet-small-label sheet-sub-header">
                   <span class="sheet-english">Melee</span>
                   <span class="sheet-german">Nahkampf</span>
@@ -2435,7 +2442,7 @@
                 <div class="sheet-col-09"></div>
                 <div class="sheet-col-1-7"></div>
                 <div class="sheet-col-1-16 sheet-vert-middle">
-                  <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_0_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_0_name}}} {{melee=1}} @{repeating_weapons_melee_0_macro_options}"></button>
+                  <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_0_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_0_name}}} {{melee=1}} @{repeating_weapons_melee_0_macro_options}\n@{repeating_weapons_melee_0_macro}"></button>
                 </div>
               </div>
               
@@ -2458,7 +2465,7 @@
                 <div class="sheet-col-09"></div>
                 <div class="sheet-col-1-7"></div>
                 <div class="sheet-col-1-16 sheet-vert-middle">
-                  <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_1_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_1_name}}} {{melee=1}} @{repeating_weapons_melee_1_macro_options}"></button>
+                  <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_1_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_1_name}}} {{melee=1}} @{repeating_weapons_melee_1_macro_options}\n@{repeating_weapons_melee_1_macro}"></button>
                 </div>
               </div>
               
@@ -2481,7 +2488,7 @@
                 <div class="sheet-col-09"></div>
                 <div class="sheet-col-1-7"></div>
                 <div class="sheet-col-1-16 sheet-vert-middle">
-                  <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_2_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_2_name}}} {{melee=1}} @{repeating_weapons_melee_2_macro_options}"></button>
+                  <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_2_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_2_name}}} {{melee=1}} @{repeating_weapons_melee_2_macro_options}\n@{repeating_weapons_melee_2_macro}"></button>
                 </div>
               </div>
               
@@ -2504,7 +2511,7 @@
                 <div class="sheet-col-09"></div>
                 <div class="sheet-col-1-7"></div>
                 <div class="sheet-col-1-16 sheet-vert-middle">
-                  <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_3_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_3_name}}} {{melee=1}} @{repeating_weapons_melee_3_macro_options}"></button>
+                  <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_3_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_3_name}}} {{melee=1}} @{repeating_weapons_melee_3_macro_options}\n@{repeating_weapons_melee_3_macro}"></button>
                 </div>
               </div>
               
@@ -2527,7 +2534,7 @@
                 <div class="sheet-col-09"></div>
                 <div class="sheet-col-1-7"></div>
                 <div class="sheet-col-1-16 sheet-vert-middle">
-                  <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_4_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_4_name}}} {{melee=1}} @{repeating_weapons_melee_4_macro_options}"></button>
+                  <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_4_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_4_name}}} {{melee=1}} @{repeating_weapons_melee_4_macro_options}\n@{repeating_weapons_melee_4_macro}"></button>
                 </div>
               </div>
               
@@ -2550,7 +2557,7 @@
                 <div class="sheet-col-09"></div>
                 <div class="sheet-col-1-7"></div>
                 <div class="sheet-col-1-16 sheet-vert-middle">
-                  <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_5_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_5_name}}} {{melee=1}} @{repeating_weapons_melee_5_macro_options}"></button>
+                  <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_5_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_5_name}}} {{melee=1}} @{repeating_weapons_melee_5_macro_options}\n@{repeating_weapons_melee_5_macro}"></button>
                 </div>
               </div>
               
@@ -2573,12 +2580,13 @@
                 <div class="sheet-col-09"></div>
                 <div class="sheet-col-1-7"></div>
                 <div class="sheet-col-1-16 sheet-vert-middle">
-                  <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_6_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_6_name}}} {{melee=1}} @{repeating_weapons_melee_6_macro_options}"></button>
+                  <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_6_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_6_name}}} {{melee=1}} @{repeating_weapons_melee_6_macro_options}\n@{repeating_weapons_melee_6_macro}"></button>
                 </div>
               </div>
               <!-- endinject -->
   
-              <div class="sheet-mar-t-md"></div>              <div class="sheet-row sheet-sub-header">
+              <div class="sheet-mar-t-md"></div>
+                <div class="sheet-row sheet-sub-header">
                 <div class="sheet-col-3545 sheet-center sheet-small-label sheet-sub-header">
                   <span class="sheet-english">Ranged</span>
                   <span class="sheet-german">Fernkampf</span>
@@ -2624,7 +2632,7 @@
                   <input class="sheet-center" type="number" name="attr_repeating_weapons_ranged_0_ammo" min="0" value="1">
                 </div>
                 <div class="sheet-col-1-16 sheet-vert-middle">
-                  <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_0_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_0_name}}} {{ranged=1}} @{repeating_weapons_ranged_0_macro_options}"></button>
+                  <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_0_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_0_name}}} {{ranged=1}} @{repeating_weapons_ranged_0_macro_options}\n@{repeating_weapons_ranged_0_macro}"></button>
                 </div>
               </div>
               
@@ -2648,7 +2656,7 @@
                   <input class="sheet-center" type="number" name="attr_repeating_weapons_ranged_1_ammo" min="0" value="1">
                 </div>
                 <div class="sheet-col-1-16 sheet-vert-middle">
-                  <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_1_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_1_name}}} {{ranged=1}} @{repeating_weapons_ranged_1_macro_options}"></button>
+                  <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_1_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_1_name}}} {{ranged=1}} @{repeating_weapons_ranged_1_macro_options}\n@{repeating_weapons_ranged_1_macro}"></button>
                 </div>
               </div>
               
@@ -2672,7 +2680,7 @@
                   <input class="sheet-center" type="number" name="attr_repeating_weapons_ranged_2_ammo" min="0" value="1">
                 </div>
                 <div class="sheet-col-1-16 sheet-vert-middle">
-                  <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_2_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_2_name}}} {{ranged=1}} @{repeating_weapons_ranged_2_macro_options}"></button>
+                  <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_2_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_2_name}}} {{ranged=1}} @{repeating_weapons_ranged_2_macro_options}\n@{repeating_weapons_ranged_2_macro}"></button>
                 </div>
               </div>
               
@@ -2696,7 +2704,7 @@
                   <input class="sheet-center" type="number" name="attr_repeating_weapons_ranged_3_ammo" min="0" value="1">
                 </div>
                 <div class="sheet-col-1-16 sheet-vert-middle">
-                  <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_3_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_3_name}}} {{ranged=1}} @{repeating_weapons_ranged_3_macro_options}"></button>
+                  <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_3_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_3_name}}} {{ranged=1}} @{repeating_weapons_ranged_3_macro_options}\n@{repeating_weapons_ranged_3_macro}"></button>
                 </div>
               </div>
               
@@ -2720,7 +2728,7 @@
                   <input class="sheet-center" type="number" name="attr_repeating_weapons_ranged_4_ammo" min="0" value="1">
                 </div>
                 <div class="sheet-col-1-16 sheet-vert-middle">
-                  <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_4_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_4_name}}} {{ranged=1}} @{repeating_weapons_ranged_4_macro_options}"></button>
+                  <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_4_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_4_name}}} {{ranged=1}} @{repeating_weapons_ranged_4_macro_options}\n@{repeating_weapons_ranged_4_macro}"></button>
                 </div>
               </div>
               
@@ -2744,7 +2752,7 @@
                   <input class="sheet-center" type="number" name="attr_repeating_weapons_ranged_5_ammo" min="0" value="1">
                 </div>
                 <div class="sheet-col-1-16 sheet-vert-middle">
-                  <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_5_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_5_name}}} {{ranged=1}} @{repeating_weapons_ranged_5_macro_options}"></button>
+                  <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_5_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_5_name}}} {{ranged=1}} @{repeating_weapons_ranged_5_macro_options}\n@{repeating_weapons_ranged_5_macro}"></button>
                 </div>
               </div>
               
@@ -2768,7 +2776,7 @@
                   <input class="sheet-center" type="number" name="attr_repeating_weapons_ranged_6_ammo" min="0" value="1">
                 </div>
                 <div class="sheet-col-1-16 sheet-vert-middle">
-                  <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_6_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_6_name}}} {{ranged=1}} @{repeating_weapons_ranged_6_macro_options}"></button>
+                  <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_6_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_6_name}}} {{ranged=1}} @{repeating_weapons_ranged_6_macro_options}\n@{repeating_weapons_ranged_6_macro}"></button>
                 </div>
               </div>
               <!-- endinject -->
@@ -2782,7 +2790,8 @@
         </div>
         <div class="sheet-row sheet-quick-attacks sheet-npc-version sheet-mar-b-md">
           <div class="sheet-col-1">
-            <div class="sheet-wrap-box" title="Quick Actions">            <div class="sheet-row sheet-sub-header">
+            <div class="sheet-wrap-box" title="Quick Actions">
+              <div class="sheet-row sheet-sub-header">
                 <div class="sheet-col-3545 sheet-center sheet-small-label sheet-sub-header">
                   <span class="sheet-english">Ranged</span>
                   <span class="sheet-german">Fernkampf</span>
@@ -2882,7 +2891,8 @@
     </div>
     <hr>
   </div>
-  <div class="sheet-section-background sheet-pc-version">
+
+  <div class="sheet-section-background sheet-pc-version">
     <h4 class="sheet-center">
       <span class="sheet-english">Appearance </span>
       <span class="sheet-german">Aussehen </span>
@@ -3020,7 +3030,8 @@
     </div>
     <hr>
   </div>
-  <div class="sheet-section-class sheet-pc-version">
+
+  <div class="sheet-section-class sheet-pc-version">
     <h4 class="sheet-center">Class Levels and Resources <span class="sheet-pictos">Y</span></h4>
     <div class="sheet-row sheet-mar-b-md">
       <div class="sheet-col-3-5 sheet-pad-r-lg">
@@ -8336,7 +8347,8 @@
     <input type="hidden" name="attr_classactionunskilledcha" value="@{classactionunskilledcha1} @{classactionunskilledcha2} @{classactionunskilledcha3} @{classactionunskilledcha4} @{classactionunskilledcha5} @{classactionunskilledcha6} @{classactionunskilledcha7} @{classactionunskilledcha8} @{classactionunskilledcha9} @{classactionunskilledcha10} @{classactionunskilledcha11} @{classactionunskilledcha12} @{classactionunskilledcha13} @{classactionunskilledcha14} @{classactionunskilledcha15} @{classactionunskilledcha16} @{classactionunskilledcha17} @{classactionunskilledcha18} @{classactionunskilledcha19} @{classactionunskilledcha20} {{showclassactions=1}}">
     <hr>
   </div>
-  <div class="sheet-section-weapons sheet-pc-version">
+
+  <div class="sheet-section-weapons sheet-pc-version">
     <input type="hidden" name="attr_finesse_mod" value="[[((@{strength_mod} + @{dexterity_mod} + abs(@{strength_mod} - @{dexterity_mod})) / 2)]]" disabled="disabled">
   
     <h4 class="sheet-center">Weapons <span class="sheet-pictos">D</span></h4>
@@ -8348,7 +8360,8 @@
   
     <div class="sheet-row">
       <div class="sheet-col-1-3 sheet-quick-attacks sheet-pad-r-sm">
-        <div class="sheet-col-1-1 sheet-wrap-box sheet-toggle-melee-weapons" title="Quick Melee Attacks">          <div class="sheet-row sheet-sub-header">
+        <div class="sheet-col-1-1 sheet-wrap-box sheet-toggle-melee-weapons" title="Quick Melee Attacks">
+            <div class="sheet-row sheet-sub-header">
             <div class="sheet-col-3545 sheet-center sheet-small-label sheet-sub-header">
               <span class="sheet-english">Melee</span>
               <span class="sheet-german">Nahkampf</span>
@@ -8389,7 +8402,7 @@
             <div class="sheet-col-09"></div>
             <div class="sheet-col-1-7"></div>
             <div class="sheet-col-1-16 sheet-vert-middle">
-              <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_0_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_0_name}}} {{melee=1}} @{repeating_weapons_melee_0_macro_options}"></button>
+              <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_0_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_0_name}}} {{melee=1}} @{repeating_weapons_melee_0_macro_options}\n@{repeating_weapons_melee_0_macro}"></button>
             </div>
           </div>
           
@@ -8412,7 +8425,7 @@
             <div class="sheet-col-09"></div>
             <div class="sheet-col-1-7"></div>
             <div class="sheet-col-1-16 sheet-vert-middle">
-              <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_1_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_1_name}}} {{melee=1}} @{repeating_weapons_melee_1_macro_options}"></button>
+              <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_1_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_1_name}}} {{melee=1}} @{repeating_weapons_melee_1_macro_options}\n@{repeating_weapons_melee_1_macro}"></button>
             </div>
           </div>
           
@@ -8435,7 +8448,7 @@
             <div class="sheet-col-09"></div>
             <div class="sheet-col-1-7"></div>
             <div class="sheet-col-1-16 sheet-vert-middle">
-              <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_2_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_2_name}}} {{melee=1}} @{repeating_weapons_melee_2_macro_options}"></button>
+              <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_2_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_2_name}}} {{melee=1}} @{repeating_weapons_melee_2_macro_options}\n@{repeating_weapons_melee_2_macro}"></button>
             </div>
           </div>
           
@@ -8458,7 +8471,7 @@
             <div class="sheet-col-09"></div>
             <div class="sheet-col-1-7"></div>
             <div class="sheet-col-1-16 sheet-vert-middle">
-              <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_3_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_3_name}}} {{melee=1}} @{repeating_weapons_melee_3_macro_options}"></button>
+              <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_3_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_3_name}}} {{melee=1}} @{repeating_weapons_melee_3_macro_options}\n@{repeating_weapons_melee_3_macro}"></button>
             </div>
           </div>
           
@@ -8481,7 +8494,7 @@
             <div class="sheet-col-09"></div>
             <div class="sheet-col-1-7"></div>
             <div class="sheet-col-1-16 sheet-vert-middle">
-              <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_4_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_4_name}}} {{melee=1}} @{repeating_weapons_melee_4_macro_options}"></button>
+              <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_4_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_4_name}}} {{melee=1}} @{repeating_weapons_melee_4_macro_options}\n@{repeating_weapons_melee_4_macro}"></button>
             </div>
           </div>
           
@@ -8504,7 +8517,7 @@
             <div class="sheet-col-09"></div>
             <div class="sheet-col-1-7"></div>
             <div class="sheet-col-1-16 sheet-vert-middle">
-              <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_5_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_5_name}}} {{melee=1}} @{repeating_weapons_melee_5_macro_options}"></button>
+              <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_5_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_5_name}}} {{melee=1}} @{repeating_weapons_melee_5_macro_options}\n@{repeating_weapons_melee_5_macro}"></button>
             </div>
           </div>
           
@@ -8527,7 +8540,7 @@
             <div class="sheet-col-09"></div>
             <div class="sheet-col-1-7"></div>
             <div class="sheet-col-1-16 sheet-vert-middle">
-              <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_6_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_6_name}}} {{melee=1}} @{repeating_weapons_melee_6_macro_options}"></button>
+              <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_6_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_6_name}}} {{melee=1}} @{repeating_weapons_melee_6_macro_options}\n@{repeating_weapons_melee_6_macro}"></button>
             </div>
           </div>
           <!-- endinject -->
@@ -8539,7 +8552,8 @@
         </div>
       </div>
       <div class="sheet-col-1-3 sheet-quick-attacks sheet-pad-l-sm">
-        <div class="sheet-col-1-1 sheet-wrap-box sheet-toggle-ranged-weapons" title="Quick Ranged Attacks">          <div class="sheet-row sheet-sub-header">
+        <div class="sheet-col-1-1 sheet-wrap-box sheet-toggle-ranged-weapons" title="Quick Ranged Attacks">
+            <div class="sheet-row sheet-sub-header">
             <div class="sheet-col-3545 sheet-center sheet-small-label sheet-sub-header">
               <span class="sheet-english">Ranged</span>
               <span class="sheet-german">Fernkampf</span>
@@ -8585,7 +8599,7 @@
               <input class="sheet-center" type="number" name="attr_repeating_weapons_ranged_0_ammo" min="0" value="1">
             </div>
             <div class="sheet-col-1-16 sheet-vert-middle">
-              <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_0_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_0_name}}} {{ranged=1}} @{repeating_weapons_ranged_0_macro_options}"></button>
+              <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_0_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_0_name}}} {{ranged=1}} @{repeating_weapons_ranged_0_macro_options}\n@{repeating_weapons_ranged_0_macro}"></button>
             </div>
           </div>
           
@@ -8609,7 +8623,7 @@
               <input class="sheet-center" type="number" name="attr_repeating_weapons_ranged_1_ammo" min="0" value="1">
             </div>
             <div class="sheet-col-1-16 sheet-vert-middle">
-              <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_1_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_1_name}}} {{ranged=1}} @{repeating_weapons_ranged_1_macro_options}"></button>
+              <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_1_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_1_name}}} {{ranged=1}} @{repeating_weapons_ranged_1_macro_options}\n@{repeating_weapons_ranged_1_macro}"></button>
             </div>
           </div>
           
@@ -8633,7 +8647,7 @@
               <input class="sheet-center" type="number" name="attr_repeating_weapons_ranged_2_ammo" min="0" value="1">
             </div>
             <div class="sheet-col-1-16 sheet-vert-middle">
-              <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_2_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_2_name}}} {{ranged=1}} @{repeating_weapons_ranged_2_macro_options}"></button>
+              <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_2_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_2_name}}} {{ranged=1}} @{repeating_weapons_ranged_2_macro_options}\n@{repeating_weapons_ranged_2_macro}"></button>
             </div>
           </div>
           
@@ -8657,7 +8671,7 @@
               <input class="sheet-center" type="number" name="attr_repeating_weapons_ranged_3_ammo" min="0" value="1">
             </div>
             <div class="sheet-col-1-16 sheet-vert-middle">
-              <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_3_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_3_name}}} {{ranged=1}} @{repeating_weapons_ranged_3_macro_options}"></button>
+              <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_3_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_3_name}}} {{ranged=1}} @{repeating_weapons_ranged_3_macro_options}\n@{repeating_weapons_ranged_3_macro}"></button>
             </div>
           </div>
           
@@ -8681,7 +8695,7 @@
               <input class="sheet-center" type="number" name="attr_repeating_weapons_ranged_4_ammo" min="0" value="1">
             </div>
             <div class="sheet-col-1-16 sheet-vert-middle">
-              <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_4_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_4_name}}} {{ranged=1}} @{repeating_weapons_ranged_4_macro_options}"></button>
+              <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_4_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_4_name}}} {{ranged=1}} @{repeating_weapons_ranged_4_macro_options}\n@{repeating_weapons_ranged_4_macro}"></button>
             </div>
           </div>
           
@@ -8705,7 +8719,7 @@
               <input class="sheet-center" type="number" name="attr_repeating_weapons_ranged_5_ammo" min="0" value="1">
             </div>
             <div class="sheet-col-1-16 sheet-vert-middle">
-              <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_5_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_5_name}}} {{ranged=1}} @{repeating_weapons_ranged_5_macro_options}"></button>
+              <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_5_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_5_name}}} {{ranged=1}} @{repeating_weapons_ranged_5_macro_options}\n@{repeating_weapons_ranged_5_macro}"></button>
             </div>
           </div>
           
@@ -8729,7 +8743,7 @@
               <input class="sheet-center" type="number" name="attr_repeating_weapons_ranged_6_ammo" min="0" value="1">
             </div>
             <div class="sheet-col-1-16 sheet-vert-middle">
-              <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_6_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_6_name}}} {{ranged=1}} @{repeating_weapons_ranged_6_macro_options}"></button>
+              <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_6_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_6_name}}} {{ranged=1}} @{repeating_weapons_ranged_6_macro_options}\n@{repeating_weapons_ranged_6_macro}"></button>
             </div>
           </div>
           <!-- endinject -->
@@ -8750,7 +8764,8 @@
                 <span class="sheet-german">Automatisches hinzufügen von Boni/Mali zu etlichen Würfen, die mit den Makros ausgeführt werden.<br>Benutzung: du erhälst einen magischen Gegenstand, der dir +1 auf Rettungswürfe gibt, trage eine 1 in das Rettungswurf feld ein.</span>
               </div>
             </div>
-          </div>          <div class="sheet-row sheet-sub-header">
+          </div>
+            <div class="sheet-row sheet-sub-header">
             <div class="sheet-col-1-3 sheet-center sheet-small-label sheet-sub-header">
               <span class="sheet-english">Weapons</span>
               <span class="sheet-german">Waffen<!--TODO: German--></span>
@@ -8842,13 +8857,14 @@
           <input type="checkbox" name="attr_repeating_weapons_melee_0_toggle_crit" class="sheet-tab-action sheet-toggle-crit sheet-mar-t-md" value="@{repeating_weapons_melee_0_var_crit}"><span class="sheet-tab-action sheet-toggle-crit sheet-mar-t-md">Crit</span>
           <input type="checkbox" name="attr_repeating_weapons_melee_0_toggle_crit_bonus" class="sheet-tab-action sheet-toggle-crit-bonus sheet-mar-t-nine" value="@{repeating_weapons_melee_0_var_crit_bonus}"><span class="sheet-tab-action sheet-toggle-crit-bonus sheet-mar-t-nine">Bonus</span>
           <input type="checkbox" name="attr_repeating_weapons_melee_0_toggle_bonuses" class="sheet-tab-action sheet-toggle-bonuses" value="@{repeating_weapons_melee_0_var_bonuses}"><span class="sheet-tab-action sheet-toggle-bonuses">Bonuses</span>
+          <input type="checkbox" name="attr_repeating_weapons_melee_0_toggle_macro" class="sheet-tab-action sheet-toggle-macro" value="@{repeating_weapons_melee_0_var_macro}"><span class="sheet-tab-action sheet-toggle-macro">Macro</span>
         
           <input type="hidden" name="attr_repeating_weapons_melee_0_macro_options" value="@{repeating_weapons_melee_0_toggle_emote} @{repeating_weapons_melee_0_toggle_attack} @{repeating_weapons_melee_0_toggle_crit} @{repeating_weapons_melee_0_toggle_reach} @{repeating_weapons_melee_0_toggle_damage} @{repeating_weapons_melee_0_toggle_second_damage}">
         
           <div class="sheet-action-button-group sheet-right">
             <div class="sheet-row">
               <div class="sheet-col sheet-center sheet-vert-middle">
-                <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_0_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_0_name}}} {{melee=1}} @{repeating_weapons_melee_0_macro_options}">
+                <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_0_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_0_name}}} {{melee=1}} @{repeating_weapons_melee_0_macro_options}\n@{repeating_weapons_melee_0_macro}">
                   <span>Melee</span>
                 </button>
               </div>
@@ -8858,6 +8874,12 @@
             <div class="sheet-col-1 sheet-center">
               <textarea class="sheet-xs-textarea" name="attr_repeating_weapons_melee_0_emote"></textarea>
               <div class="sheet-small-label">Emote</div>
+            </div>
+          </div>
+          <div class="sheet-row sheet-toggle-macro sheet-mar-t-sm">
+            <div class="sheet-col-1 sheet-center">
+              <textarea class="sheet-xs-textarea" name="attr_repeating_weapons_melee_0_macro"></textarea>
+              <div class="sheet-small-label">Macro</div>
             </div>
           </div>
           <div class="sheet-row sheet-mar-t-sm">
@@ -8963,13 +8985,14 @@
           <input type="checkbox" name="attr_repeating_weapons_melee_1_toggle_crit" class="sheet-tab-action sheet-toggle-crit sheet-mar-t-md" value="@{repeating_weapons_melee_1_var_crit}"><span class="sheet-tab-action sheet-toggle-crit sheet-mar-t-md">Crit</span>
           <input type="checkbox" name="attr_repeating_weapons_melee_1_toggle_crit_bonus" class="sheet-tab-action sheet-toggle-crit-bonus sheet-mar-t-nine" value="@{repeating_weapons_melee_1_var_crit_bonus}"><span class="sheet-tab-action sheet-toggle-crit-bonus sheet-mar-t-nine">Bonus</span>
           <input type="checkbox" name="attr_repeating_weapons_melee_1_toggle_bonuses" class="sheet-tab-action sheet-toggle-bonuses" value="@{repeating_weapons_melee_1_var_bonuses}"><span class="sheet-tab-action sheet-toggle-bonuses">Bonuses</span>
+          <input type="checkbox" name="attr_repeating_weapons_melee_1_toggle_macro" class="sheet-tab-action sheet-toggle-macro" value="@{repeating_weapons_melee_1_var_macro}"><span class="sheet-tab-action sheet-toggle-macro">Macro</span>
         
           <input type="hidden" name="attr_repeating_weapons_melee_1_macro_options" value="@{repeating_weapons_melee_1_toggle_emote} @{repeating_weapons_melee_1_toggle_attack} @{repeating_weapons_melee_1_toggle_crit} @{repeating_weapons_melee_1_toggle_reach} @{repeating_weapons_melee_1_toggle_damage} @{repeating_weapons_melee_1_toggle_second_damage}">
         
           <div class="sheet-action-button-group sheet-right">
             <div class="sheet-row">
               <div class="sheet-col sheet-center sheet-vert-middle">
-                <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_1_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_1_name}}} {{melee=1}} @{repeating_weapons_melee_1_macro_options}">
+                <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_1_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_1_name}}} {{melee=1}} @{repeating_weapons_melee_1_macro_options}\n@{repeating_weapons_melee_1_macro}">
                   <span>Melee</span>
                 </button>
               </div>
@@ -8979,6 +9002,12 @@
             <div class="sheet-col-1 sheet-center">
               <textarea class="sheet-xs-textarea" name="attr_repeating_weapons_melee_1_emote"></textarea>
               <div class="sheet-small-label">Emote</div>
+            </div>
+          </div>
+          <div class="sheet-row sheet-toggle-macro sheet-mar-t-sm">
+            <div class="sheet-col-1 sheet-center">
+              <textarea class="sheet-xs-textarea" name="attr_repeating_weapons_melee_1_macro"></textarea>
+              <div class="sheet-small-label">Macro</div>
             </div>
           </div>
           <div class="sheet-row sheet-mar-t-sm">
@@ -9084,13 +9113,14 @@
           <input type="checkbox" name="attr_repeating_weapons_melee_2_toggle_crit" class="sheet-tab-action sheet-toggle-crit sheet-mar-t-md" value="@{repeating_weapons_melee_2_var_crit}"><span class="sheet-tab-action sheet-toggle-crit sheet-mar-t-md">Crit</span>
           <input type="checkbox" name="attr_repeating_weapons_melee_2_toggle_crit_bonus" class="sheet-tab-action sheet-toggle-crit-bonus sheet-mar-t-nine" value="@{repeating_weapons_melee_2_var_crit_bonus}"><span class="sheet-tab-action sheet-toggle-crit-bonus sheet-mar-t-nine">Bonus</span>
           <input type="checkbox" name="attr_repeating_weapons_melee_2_toggle_bonuses" class="sheet-tab-action sheet-toggle-bonuses" value="@{repeating_weapons_melee_2_var_bonuses}"><span class="sheet-tab-action sheet-toggle-bonuses">Bonuses</span>
+          <input type="checkbox" name="attr_repeating_weapons_melee_2_toggle_macro" class="sheet-tab-action sheet-toggle-macro" value="@{repeating_weapons_melee_2_var_macro}"><span class="sheet-tab-action sheet-toggle-macro">Macro</span>
         
           <input type="hidden" name="attr_repeating_weapons_melee_2_macro_options" value="@{repeating_weapons_melee_2_toggle_emote} @{repeating_weapons_melee_2_toggle_attack} @{repeating_weapons_melee_2_toggle_crit} @{repeating_weapons_melee_2_toggle_reach} @{repeating_weapons_melee_2_toggle_damage} @{repeating_weapons_melee_2_toggle_second_damage}">
         
           <div class="sheet-action-button-group sheet-right">
             <div class="sheet-row">
               <div class="sheet-col sheet-center sheet-vert-middle">
-                <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_2_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_2_name}}} {{melee=1}} @{repeating_weapons_melee_2_macro_options}">
+                <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_2_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_2_name}}} {{melee=1}} @{repeating_weapons_melee_2_macro_options}\n@{repeating_weapons_melee_2_macro}">
                   <span>Melee</span>
                 </button>
               </div>
@@ -9100,6 +9130,12 @@
             <div class="sheet-col-1 sheet-center">
               <textarea class="sheet-xs-textarea" name="attr_repeating_weapons_melee_2_emote"></textarea>
               <div class="sheet-small-label">Emote</div>
+            </div>
+          </div>
+          <div class="sheet-row sheet-toggle-macro sheet-mar-t-sm">
+            <div class="sheet-col-1 sheet-center">
+              <textarea class="sheet-xs-textarea" name="attr_repeating_weapons_melee_2_macro"></textarea>
+              <div class="sheet-small-label">Macro</div>
             </div>
           </div>
           <div class="sheet-row sheet-mar-t-sm">
@@ -9205,13 +9241,14 @@
           <input type="checkbox" name="attr_repeating_weapons_melee_3_toggle_crit" class="sheet-tab-action sheet-toggle-crit sheet-mar-t-md" value="@{repeating_weapons_melee_3_var_crit}"><span class="sheet-tab-action sheet-toggle-crit sheet-mar-t-md">Crit</span>
           <input type="checkbox" name="attr_repeating_weapons_melee_3_toggle_crit_bonus" class="sheet-tab-action sheet-toggle-crit-bonus sheet-mar-t-nine" value="@{repeating_weapons_melee_3_var_crit_bonus}"><span class="sheet-tab-action sheet-toggle-crit-bonus sheet-mar-t-nine">Bonus</span>
           <input type="checkbox" name="attr_repeating_weapons_melee_3_toggle_bonuses" class="sheet-tab-action sheet-toggle-bonuses" value="@{repeating_weapons_melee_3_var_bonuses}"><span class="sheet-tab-action sheet-toggle-bonuses">Bonuses</span>
+          <input type="checkbox" name="attr_repeating_weapons_melee_3_toggle_macro" class="sheet-tab-action sheet-toggle-macro" value="@{repeating_weapons_melee_3_var_macro}"><span class="sheet-tab-action sheet-toggle-macro">Macro</span>
         
           <input type="hidden" name="attr_repeating_weapons_melee_3_macro_options" value="@{repeating_weapons_melee_3_toggle_emote} @{repeating_weapons_melee_3_toggle_attack} @{repeating_weapons_melee_3_toggle_crit} @{repeating_weapons_melee_3_toggle_reach} @{repeating_weapons_melee_3_toggle_damage} @{repeating_weapons_melee_3_toggle_second_damage}">
         
           <div class="sheet-action-button-group sheet-right">
             <div class="sheet-row">
               <div class="sheet-col sheet-center sheet-vert-middle">
-                <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_3_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_3_name}}} {{melee=1}} @{repeating_weapons_melee_3_macro_options}">
+                <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_3_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_3_name}}} {{melee=1}} @{repeating_weapons_melee_3_macro_options}\n@{repeating_weapons_melee_3_macro}">
                   <span>Melee</span>
                 </button>
               </div>
@@ -9221,6 +9258,12 @@
             <div class="sheet-col-1 sheet-center">
               <textarea class="sheet-xs-textarea" name="attr_repeating_weapons_melee_3_emote"></textarea>
               <div class="sheet-small-label">Emote</div>
+            </div>
+          </div>
+          <div class="sheet-row sheet-toggle-macro sheet-mar-t-sm">
+            <div class="sheet-col-1 sheet-center">
+              <textarea class="sheet-xs-textarea" name="attr_repeating_weapons_melee_3_macro"></textarea>
+              <div class="sheet-small-label">Macro</div>
             </div>
           </div>
           <div class="sheet-row sheet-mar-t-sm">
@@ -9326,13 +9369,14 @@
           <input type="checkbox" name="attr_repeating_weapons_melee_4_toggle_crit" class="sheet-tab-action sheet-toggle-crit sheet-mar-t-md" value="@{repeating_weapons_melee_4_var_crit}"><span class="sheet-tab-action sheet-toggle-crit sheet-mar-t-md">Crit</span>
           <input type="checkbox" name="attr_repeating_weapons_melee_4_toggle_crit_bonus" class="sheet-tab-action sheet-toggle-crit-bonus sheet-mar-t-nine" value="@{repeating_weapons_melee_4_var_crit_bonus}"><span class="sheet-tab-action sheet-toggle-crit-bonus sheet-mar-t-nine">Bonus</span>
           <input type="checkbox" name="attr_repeating_weapons_melee_4_toggle_bonuses" class="sheet-tab-action sheet-toggle-bonuses" value="@{repeating_weapons_melee_4_var_bonuses}"><span class="sheet-tab-action sheet-toggle-bonuses">Bonuses</span>
+          <input type="checkbox" name="attr_repeating_weapons_melee_4_toggle_macro" class="sheet-tab-action sheet-toggle-macro" value="@{repeating_weapons_melee_4_var_macro}"><span class="sheet-tab-action sheet-toggle-macro">Macro</span>
         
           <input type="hidden" name="attr_repeating_weapons_melee_4_macro_options" value="@{repeating_weapons_melee_4_toggle_emote} @{repeating_weapons_melee_4_toggle_attack} @{repeating_weapons_melee_4_toggle_crit} @{repeating_weapons_melee_4_toggle_reach} @{repeating_weapons_melee_4_toggle_damage} @{repeating_weapons_melee_4_toggle_second_damage}">
         
           <div class="sheet-action-button-group sheet-right">
             <div class="sheet-row">
               <div class="sheet-col sheet-center sheet-vert-middle">
-                <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_4_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_4_name}}} {{melee=1}} @{repeating_weapons_melee_4_macro_options}">
+                <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_4_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_4_name}}} {{melee=1}} @{repeating_weapons_melee_4_macro_options}\n@{repeating_weapons_melee_4_macro}">
                   <span>Melee</span>
                 </button>
               </div>
@@ -9342,6 +9386,12 @@
             <div class="sheet-col-1 sheet-center">
               <textarea class="sheet-xs-textarea" name="attr_repeating_weapons_melee_4_emote"></textarea>
               <div class="sheet-small-label">Emote</div>
+            </div>
+          </div>
+          <div class="sheet-row sheet-toggle-macro sheet-mar-t-sm">
+            <div class="sheet-col-1 sheet-center">
+              <textarea class="sheet-xs-textarea" name="attr_repeating_weapons_melee_4_macro"></textarea>
+              <div class="sheet-small-label">Macro</div>
             </div>
           </div>
           <div class="sheet-row sheet-mar-t-sm">
@@ -9447,13 +9497,14 @@
           <input type="checkbox" name="attr_repeating_weapons_melee_5_toggle_crit" class="sheet-tab-action sheet-toggle-crit sheet-mar-t-md" value="@{repeating_weapons_melee_5_var_crit}"><span class="sheet-tab-action sheet-toggle-crit sheet-mar-t-md">Crit</span>
           <input type="checkbox" name="attr_repeating_weapons_melee_5_toggle_crit_bonus" class="sheet-tab-action sheet-toggle-crit-bonus sheet-mar-t-nine" value="@{repeating_weapons_melee_5_var_crit_bonus}"><span class="sheet-tab-action sheet-toggle-crit-bonus sheet-mar-t-nine">Bonus</span>
           <input type="checkbox" name="attr_repeating_weapons_melee_5_toggle_bonuses" class="sheet-tab-action sheet-toggle-bonuses" value="@{repeating_weapons_melee_5_var_bonuses}"><span class="sheet-tab-action sheet-toggle-bonuses">Bonuses</span>
+          <input type="checkbox" name="attr_repeating_weapons_melee_5_toggle_macro" class="sheet-tab-action sheet-toggle-macro" value="@{repeating_weapons_melee_5_var_macro}"><span class="sheet-tab-action sheet-toggle-macro">Macro</span>
         
           <input type="hidden" name="attr_repeating_weapons_melee_5_macro_options" value="@{repeating_weapons_melee_5_toggle_emote} @{repeating_weapons_melee_5_toggle_attack} @{repeating_weapons_melee_5_toggle_crit} @{repeating_weapons_melee_5_toggle_reach} @{repeating_weapons_melee_5_toggle_damage} @{repeating_weapons_melee_5_toggle_second_damage}">
         
           <div class="sheet-action-button-group sheet-right">
             <div class="sheet-row">
               <div class="sheet-col sheet-center sheet-vert-middle">
-                <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_5_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_5_name}}} {{melee=1}} @{repeating_weapons_melee_5_macro_options}">
+                <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_5_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_5_name}}} {{melee=1}} @{repeating_weapons_melee_5_macro_options}\n@{repeating_weapons_melee_5_macro}">
                   <span>Melee</span>
                 </button>
               </div>
@@ -9463,6 +9514,12 @@
             <div class="sheet-col-1 sheet-center">
               <textarea class="sheet-xs-textarea" name="attr_repeating_weapons_melee_5_emote"></textarea>
               <div class="sheet-small-label">Emote</div>
+            </div>
+          </div>
+          <div class="sheet-row sheet-toggle-macro sheet-mar-t-sm">
+            <div class="sheet-col-1 sheet-center">
+              <textarea class="sheet-xs-textarea" name="attr_repeating_weapons_melee_5_macro"></textarea>
+              <div class="sheet-small-label">Macro</div>
             </div>
           </div>
           <div class="sheet-row sheet-mar-t-sm">
@@ -9568,13 +9625,14 @@
           <input type="checkbox" name="attr_repeating_weapons_melee_6_toggle_crit" class="sheet-tab-action sheet-toggle-crit sheet-mar-t-md" value="@{repeating_weapons_melee_6_var_crit}"><span class="sheet-tab-action sheet-toggle-crit sheet-mar-t-md">Crit</span>
           <input type="checkbox" name="attr_repeating_weapons_melee_6_toggle_crit_bonus" class="sheet-tab-action sheet-toggle-crit-bonus sheet-mar-t-nine" value="@{repeating_weapons_melee_6_var_crit_bonus}"><span class="sheet-tab-action sheet-toggle-crit-bonus sheet-mar-t-nine">Bonus</span>
           <input type="checkbox" name="attr_repeating_weapons_melee_6_toggle_bonuses" class="sheet-tab-action sheet-toggle-bonuses" value="@{repeating_weapons_melee_6_var_bonuses}"><span class="sheet-tab-action sheet-toggle-bonuses">Bonuses</span>
+          <input type="checkbox" name="attr_repeating_weapons_melee_6_toggle_macro" class="sheet-tab-action sheet-toggle-macro" value="@{repeating_weapons_melee_6_var_macro}"><span class="sheet-tab-action sheet-toggle-macro">Macro</span>
         
           <input type="hidden" name="attr_repeating_weapons_melee_6_macro_options" value="@{repeating_weapons_melee_6_toggle_emote} @{repeating_weapons_melee_6_toggle_attack} @{repeating_weapons_melee_6_toggle_crit} @{repeating_weapons_melee_6_toggle_reach} @{repeating_weapons_melee_6_toggle_damage} @{repeating_weapons_melee_6_toggle_second_damage}">
         
           <div class="sheet-action-button-group sheet-right">
             <div class="sheet-row">
               <div class="sheet-col sheet-center sheet-vert-middle">
-                <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_6_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_6_name}}} {{melee=1}} @{repeating_weapons_melee_6_macro_options}">
+                <button type="roll" class="sheet-roll" name="roll_repeating_weapons_melee_6_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_melee_6_name}}} {{melee=1}} @{repeating_weapons_melee_6_macro_options}\n@{repeating_weapons_melee_6_macro}">
                   <span>Melee</span>
                 </button>
               </div>
@@ -9584,6 +9642,12 @@
             <div class="sheet-col-1 sheet-center">
               <textarea class="sheet-xs-textarea" name="attr_repeating_weapons_melee_6_emote"></textarea>
               <div class="sheet-small-label">Emote</div>
+            </div>
+          </div>
+          <div class="sheet-row sheet-toggle-macro sheet-mar-t-sm">
+            <div class="sheet-col-1 sheet-center">
+              <textarea class="sheet-xs-textarea" name="attr_repeating_weapons_melee_6_macro"></textarea>
+              <div class="sheet-small-label">Macro</div>
             </div>
           </div>
           <div class="sheet-row sheet-mar-t-sm">
@@ -9696,13 +9760,14 @@
           <input type="checkbox" name="attr_repeating_weapons_ranged_0_toggle_crit" class="sheet-tab-action sheet-toggle-crit sheet-mar-t-md" value="@{repeating_weapons_ranged_0_var_crit}"><span class="sheet-tab-action sheet-toggle-crit sheet-mar-t-md">Crit</span>
           <input type="checkbox" name="attr_repeating_weapons_ranged_0_toggle_crit_bonus" class="sheet-tab-action sheet-toggle-crit-bonus sheet-mar-t-nine" value="@{repeating_weapons_ranged_0_var_crit_bonus}"><span class="sheet-tab-action sheet-toggle-crit-bonus sheet-mar-t-nine">Bonus</span>
           <input type="checkbox" name="attr_repeating_weapons_ranged_0_toggle_bonuses" class="sheet-tab-action sheet-toggle-bonuses" value="@{repeating_weapons_ranged_0_var_bonuses}"><span class="sheet-tab-action sheet-toggle-bonuses">Bonuses</span>
+          <input type="checkbox" name="attr_repeating_weapons_ranged_0_toggle_macro" class="sheet-tab-action sheet-toggle-macro" value="@{repeating_weapons_ranged_0_var_macro}"><span class="sheet-tab-action sheet-toggle-macro">Macro</span>
         
-          <input type="hidden" name="attr_repeating_weapons_ranged_0_macro_options" value="@{repeating_weapons_ranged_0_toggle_emote} @{repeating_weapons_ranged_0_toggle_attack} @{repeating_weapons_ranged_0_toggle_crit} @{repeating_weapons_ranged_0_toggle_range} @{repeating_weapons_ranged_0_toggle_damage} @{repeating_weapons_ranged_0_toggle_second_damage}">
+          <input type="hidden" name="attr_repeating_weapons_ranged_0_macro_options" value="@{repeating_weapons_ranged_0_toggle_emote} @{repeating_weapons_ranged_0_toggle_attack} @{repeating_weapons_ranged_0_toggle_crit} @{repeating_weapons_ranged_0_toggle_range} @{repeating_weapons_ranged_0_toggle_damage} @{repeating_weapons_ranged_0_toggle_second_damage} {{ammo=[[@{repeating_weapons_ranged_0_ammo} - 1]]}}">
         
           <div class="sheet-action-button-group sheet-right">
             <div class="sheet-row">
               <div class="sheet-col sheet-center sheet-vert-middle">
-                <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_0_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_0_name}}} {{ranged=1}} @{repeating_weapons_ranged_0_macro_options}">
+                <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_0_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_0_name}}} {{ranged=1}} @{repeating_weapons_ranged_0_macro_options}\n@{repeating_weapons_ranged_0_macro}">
                   <span>Ranged</span>
                 </button>
               </div>
@@ -9712,6 +9777,12 @@
             <div class="sheet-col-1 sheet-center">
               <textarea class="sheet-xs-textarea" name="attr_repeating_weapons_ranged_0_emote"></textarea>
               <div class="sheet-small-label">Emote</div>
+            </div>
+          </div>
+          <div class="sheet-row sheet-toggle-macro sheet-mar-t-sm">
+            <div class="sheet-col-1 sheet-center">
+              <textarea class="sheet-xs-textarea" name="attr_repeating_weapons_ranged_0_macro"></textarea>
+              <div class="sheet-small-label">Macro</div>
             </div>
           </div>
           <div class="sheet-row sheet-mar-t-sm">
@@ -9824,13 +9895,14 @@
           <input type="checkbox" name="attr_repeating_weapons_ranged_1_toggle_crit" class="sheet-tab-action sheet-toggle-crit sheet-mar-t-md" value="@{repeating_weapons_ranged_1_var_crit}"><span class="sheet-tab-action sheet-toggle-crit sheet-mar-t-md">Crit</span>
           <input type="checkbox" name="attr_repeating_weapons_ranged_1_toggle_crit_bonus" class="sheet-tab-action sheet-toggle-crit-bonus sheet-mar-t-nine" value="@{repeating_weapons_ranged_1_var_crit_bonus}"><span class="sheet-tab-action sheet-toggle-crit-bonus sheet-mar-t-nine">Bonus</span>
           <input type="checkbox" name="attr_repeating_weapons_ranged_1_toggle_bonuses" class="sheet-tab-action sheet-toggle-bonuses" value="@{repeating_weapons_ranged_1_var_bonuses}"><span class="sheet-tab-action sheet-toggle-bonuses">Bonuses</span>
+          <input type="checkbox" name="attr_repeating_weapons_ranged_1_toggle_macro" class="sheet-tab-action sheet-toggle-macro" value="@{repeating_weapons_ranged_1_var_macro}"><span class="sheet-tab-action sheet-toggle-macro">Macro</span>
         
-          <input type="hidden" name="attr_repeating_weapons_ranged_1_macro_options" value="@{repeating_weapons_ranged_1_toggle_emote} @{repeating_weapons_ranged_1_toggle_attack} @{repeating_weapons_ranged_1_toggle_crit} @{repeating_weapons_ranged_1_toggle_range} @{repeating_weapons_ranged_1_toggle_damage} @{repeating_weapons_ranged_1_toggle_second_damage}">
+          <input type="hidden" name="attr_repeating_weapons_ranged_1_macro_options" value="@{repeating_weapons_ranged_1_toggle_emote} @{repeating_weapons_ranged_1_toggle_attack} @{repeating_weapons_ranged_1_toggle_crit} @{repeating_weapons_ranged_1_toggle_range} @{repeating_weapons_ranged_1_toggle_damage} @{repeating_weapons_ranged_1_toggle_second_damage} {{ammo=[[@{repeating_weapons_ranged_1_ammo} - 1]]}}">
         
           <div class="sheet-action-button-group sheet-right">
             <div class="sheet-row">
               <div class="sheet-col sheet-center sheet-vert-middle">
-                <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_1_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_1_name}}} {{ranged=1}} @{repeating_weapons_ranged_1_macro_options}">
+                <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_1_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_1_name}}} {{ranged=1}} @{repeating_weapons_ranged_1_macro_options}\n@{repeating_weapons_ranged_1_macro}">
                   <span>Ranged</span>
                 </button>
               </div>
@@ -9840,6 +9912,12 @@
             <div class="sheet-col-1 sheet-center">
               <textarea class="sheet-xs-textarea" name="attr_repeating_weapons_ranged_1_emote"></textarea>
               <div class="sheet-small-label">Emote</div>
+            </div>
+          </div>
+          <div class="sheet-row sheet-toggle-macro sheet-mar-t-sm">
+            <div class="sheet-col-1 sheet-center">
+              <textarea class="sheet-xs-textarea" name="attr_repeating_weapons_ranged_1_macro"></textarea>
+              <div class="sheet-small-label">Macro</div>
             </div>
           </div>
           <div class="sheet-row sheet-mar-t-sm">
@@ -9952,13 +10030,14 @@
           <input type="checkbox" name="attr_repeating_weapons_ranged_2_toggle_crit" class="sheet-tab-action sheet-toggle-crit sheet-mar-t-md" value="@{repeating_weapons_ranged_2_var_crit}"><span class="sheet-tab-action sheet-toggle-crit sheet-mar-t-md">Crit</span>
           <input type="checkbox" name="attr_repeating_weapons_ranged_2_toggle_crit_bonus" class="sheet-tab-action sheet-toggle-crit-bonus sheet-mar-t-nine" value="@{repeating_weapons_ranged_2_var_crit_bonus}"><span class="sheet-tab-action sheet-toggle-crit-bonus sheet-mar-t-nine">Bonus</span>
           <input type="checkbox" name="attr_repeating_weapons_ranged_2_toggle_bonuses" class="sheet-tab-action sheet-toggle-bonuses" value="@{repeating_weapons_ranged_2_var_bonuses}"><span class="sheet-tab-action sheet-toggle-bonuses">Bonuses</span>
+          <input type="checkbox" name="attr_repeating_weapons_ranged_2_toggle_macro" class="sheet-tab-action sheet-toggle-macro" value="@{repeating_weapons_ranged_2_var_macro}"><span class="sheet-tab-action sheet-toggle-macro">Macro</span>
         
-          <input type="hidden" name="attr_repeating_weapons_ranged_2_macro_options" value="@{repeating_weapons_ranged_2_toggle_emote} @{repeating_weapons_ranged_2_toggle_attack} @{repeating_weapons_ranged_2_toggle_crit} @{repeating_weapons_ranged_2_toggle_range} @{repeating_weapons_ranged_2_toggle_damage} @{repeating_weapons_ranged_2_toggle_second_damage}">
+          <input type="hidden" name="attr_repeating_weapons_ranged_2_macro_options" value="@{repeating_weapons_ranged_2_toggle_emote} @{repeating_weapons_ranged_2_toggle_attack} @{repeating_weapons_ranged_2_toggle_crit} @{repeating_weapons_ranged_2_toggle_range} @{repeating_weapons_ranged_2_toggle_damage} @{repeating_weapons_ranged_2_toggle_second_damage} {{ammo=[[@{repeating_weapons_ranged_2_ammo} - 1]]}}">
         
           <div class="sheet-action-button-group sheet-right">
             <div class="sheet-row">
               <div class="sheet-col sheet-center sheet-vert-middle">
-                <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_2_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_2_name}}} {{ranged=1}} @{repeating_weapons_ranged_2_macro_options}">
+                <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_2_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_2_name}}} {{ranged=1}} @{repeating_weapons_ranged_2_macro_options}\n@{repeating_weapons_ranged_2_macro}">
                   <span>Ranged</span>
                 </button>
               </div>
@@ -9968,6 +10047,12 @@
             <div class="sheet-col-1 sheet-center">
               <textarea class="sheet-xs-textarea" name="attr_repeating_weapons_ranged_2_emote"></textarea>
               <div class="sheet-small-label">Emote</div>
+            </div>
+          </div>
+          <div class="sheet-row sheet-toggle-macro sheet-mar-t-sm">
+            <div class="sheet-col-1 sheet-center">
+              <textarea class="sheet-xs-textarea" name="attr_repeating_weapons_ranged_2_macro"></textarea>
+              <div class="sheet-small-label">Macro</div>
             </div>
           </div>
           <div class="sheet-row sheet-mar-t-sm">
@@ -10080,13 +10165,14 @@
           <input type="checkbox" name="attr_repeating_weapons_ranged_3_toggle_crit" class="sheet-tab-action sheet-toggle-crit sheet-mar-t-md" value="@{repeating_weapons_ranged_3_var_crit}"><span class="sheet-tab-action sheet-toggle-crit sheet-mar-t-md">Crit</span>
           <input type="checkbox" name="attr_repeating_weapons_ranged_3_toggle_crit_bonus" class="sheet-tab-action sheet-toggle-crit-bonus sheet-mar-t-nine" value="@{repeating_weapons_ranged_3_var_crit_bonus}"><span class="sheet-tab-action sheet-toggle-crit-bonus sheet-mar-t-nine">Bonus</span>
           <input type="checkbox" name="attr_repeating_weapons_ranged_3_toggle_bonuses" class="sheet-tab-action sheet-toggle-bonuses" value="@{repeating_weapons_ranged_3_var_bonuses}"><span class="sheet-tab-action sheet-toggle-bonuses">Bonuses</span>
+          <input type="checkbox" name="attr_repeating_weapons_ranged_3_toggle_macro" class="sheet-tab-action sheet-toggle-macro" value="@{repeating_weapons_ranged_3_var_macro}"><span class="sheet-tab-action sheet-toggle-macro">Macro</span>
         
-          <input type="hidden" name="attr_repeating_weapons_ranged_3_macro_options" value="@{repeating_weapons_ranged_3_toggle_emote} @{repeating_weapons_ranged_3_toggle_attack} @{repeating_weapons_ranged_3_toggle_crit} @{repeating_weapons_ranged_3_toggle_range} @{repeating_weapons_ranged_3_toggle_damage} @{repeating_weapons_ranged_3_toggle_second_damage}">
+          <input type="hidden" name="attr_repeating_weapons_ranged_3_macro_options" value="@{repeating_weapons_ranged_3_toggle_emote} @{repeating_weapons_ranged_3_toggle_attack} @{repeating_weapons_ranged_3_toggle_crit} @{repeating_weapons_ranged_3_toggle_range} @{repeating_weapons_ranged_3_toggle_damage} @{repeating_weapons_ranged_3_toggle_second_damage} {{ammo=[[@{repeating_weapons_ranged_3_ammo} - 1]]}}">
         
           <div class="sheet-action-button-group sheet-right">
             <div class="sheet-row">
               <div class="sheet-col sheet-center sheet-vert-middle">
-                <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_3_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_3_name}}} {{ranged=1}} @{repeating_weapons_ranged_3_macro_options}">
+                <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_3_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_3_name}}} {{ranged=1}} @{repeating_weapons_ranged_3_macro_options}\n@{repeating_weapons_ranged_3_macro}">
                   <span>Ranged</span>
                 </button>
               </div>
@@ -10096,6 +10182,12 @@
             <div class="sheet-col-1 sheet-center">
               <textarea class="sheet-xs-textarea" name="attr_repeating_weapons_ranged_3_emote"></textarea>
               <div class="sheet-small-label">Emote</div>
+            </div>
+          </div>
+          <div class="sheet-row sheet-toggle-macro sheet-mar-t-sm">
+            <div class="sheet-col-1 sheet-center">
+              <textarea class="sheet-xs-textarea" name="attr_repeating_weapons_ranged_3_macro"></textarea>
+              <div class="sheet-small-label">Macro</div>
             </div>
           </div>
           <div class="sheet-row sheet-mar-t-sm">
@@ -10208,13 +10300,14 @@
           <input type="checkbox" name="attr_repeating_weapons_ranged_4_toggle_crit" class="sheet-tab-action sheet-toggle-crit sheet-mar-t-md" value="@{repeating_weapons_ranged_4_var_crit}"><span class="sheet-tab-action sheet-toggle-crit sheet-mar-t-md">Crit</span>
           <input type="checkbox" name="attr_repeating_weapons_ranged_4_toggle_crit_bonus" class="sheet-tab-action sheet-toggle-crit-bonus sheet-mar-t-nine" value="@{repeating_weapons_ranged_4_var_crit_bonus}"><span class="sheet-tab-action sheet-toggle-crit-bonus sheet-mar-t-nine">Bonus</span>
           <input type="checkbox" name="attr_repeating_weapons_ranged_4_toggle_bonuses" class="sheet-tab-action sheet-toggle-bonuses" value="@{repeating_weapons_ranged_4_var_bonuses}"><span class="sheet-tab-action sheet-toggle-bonuses">Bonuses</span>
+          <input type="checkbox" name="attr_repeating_weapons_ranged_4_toggle_macro" class="sheet-tab-action sheet-toggle-macro" value="@{repeating_weapons_ranged_4_var_macro}"><span class="sheet-tab-action sheet-toggle-macro">Macro</span>
         
-          <input type="hidden" name="attr_repeating_weapons_ranged_4_macro_options" value="@{repeating_weapons_ranged_4_toggle_emote} @{repeating_weapons_ranged_4_toggle_attack} @{repeating_weapons_ranged_4_toggle_crit} @{repeating_weapons_ranged_4_toggle_range} @{repeating_weapons_ranged_4_toggle_damage} @{repeating_weapons_ranged_4_toggle_second_damage}">
+          <input type="hidden" name="attr_repeating_weapons_ranged_4_macro_options" value="@{repeating_weapons_ranged_4_toggle_emote} @{repeating_weapons_ranged_4_toggle_attack} @{repeating_weapons_ranged_4_toggle_crit} @{repeating_weapons_ranged_4_toggle_range} @{repeating_weapons_ranged_4_toggle_damage} @{repeating_weapons_ranged_4_toggle_second_damage} {{ammo=[[@{repeating_weapons_ranged_4_ammo} - 1]]}}">
         
           <div class="sheet-action-button-group sheet-right">
             <div class="sheet-row">
               <div class="sheet-col sheet-center sheet-vert-middle">
-                <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_4_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_4_name}}} {{ranged=1}} @{repeating_weapons_ranged_4_macro_options}">
+                <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_4_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_4_name}}} {{ranged=1}} @{repeating_weapons_ranged_4_macro_options}\n@{repeating_weapons_ranged_4_macro}">
                   <span>Ranged</span>
                 </button>
               </div>
@@ -10224,6 +10317,12 @@
             <div class="sheet-col-1 sheet-center">
               <textarea class="sheet-xs-textarea" name="attr_repeating_weapons_ranged_4_emote"></textarea>
               <div class="sheet-small-label">Emote</div>
+            </div>
+          </div>
+          <div class="sheet-row sheet-toggle-macro sheet-mar-t-sm">
+            <div class="sheet-col-1 sheet-center">
+              <textarea class="sheet-xs-textarea" name="attr_repeating_weapons_ranged_4_macro"></textarea>
+              <div class="sheet-small-label">Macro</div>
             </div>
           </div>
           <div class="sheet-row sheet-mar-t-sm">
@@ -10336,13 +10435,14 @@
           <input type="checkbox" name="attr_repeating_weapons_ranged_5_toggle_crit" class="sheet-tab-action sheet-toggle-crit sheet-mar-t-md" value="@{repeating_weapons_ranged_5_var_crit}"><span class="sheet-tab-action sheet-toggle-crit sheet-mar-t-md">Crit</span>
           <input type="checkbox" name="attr_repeating_weapons_ranged_5_toggle_crit_bonus" class="sheet-tab-action sheet-toggle-crit-bonus sheet-mar-t-nine" value="@{repeating_weapons_ranged_5_var_crit_bonus}"><span class="sheet-tab-action sheet-toggle-crit-bonus sheet-mar-t-nine">Bonus</span>
           <input type="checkbox" name="attr_repeating_weapons_ranged_5_toggle_bonuses" class="sheet-tab-action sheet-toggle-bonuses" value="@{repeating_weapons_ranged_5_var_bonuses}"><span class="sheet-tab-action sheet-toggle-bonuses">Bonuses</span>
+          <input type="checkbox" name="attr_repeating_weapons_ranged_5_toggle_macro" class="sheet-tab-action sheet-toggle-macro" value="@{repeating_weapons_ranged_5_var_macro}"><span class="sheet-tab-action sheet-toggle-macro">Macro</span>
         
-          <input type="hidden" name="attr_repeating_weapons_ranged_5_macro_options" value="@{repeating_weapons_ranged_5_toggle_emote} @{repeating_weapons_ranged_5_toggle_attack} @{repeating_weapons_ranged_5_toggle_crit} @{repeating_weapons_ranged_5_toggle_range} @{repeating_weapons_ranged_5_toggle_damage} @{repeating_weapons_ranged_5_toggle_second_damage}">
+          <input type="hidden" name="attr_repeating_weapons_ranged_5_macro_options" value="@{repeating_weapons_ranged_5_toggle_emote} @{repeating_weapons_ranged_5_toggle_attack} @{repeating_weapons_ranged_5_toggle_crit} @{repeating_weapons_ranged_5_toggle_range} @{repeating_weapons_ranged_5_toggle_damage} @{repeating_weapons_ranged_5_toggle_second_damage} {{ammo=[[@{repeating_weapons_ranged_5_ammo} - 1]]}}">
         
           <div class="sheet-action-button-group sheet-right">
             <div class="sheet-row">
               <div class="sheet-col sheet-center sheet-vert-middle">
-                <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_5_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_5_name}}} {{ranged=1}} @{repeating_weapons_ranged_5_macro_options}">
+                <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_5_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_5_name}}} {{ranged=1}} @{repeating_weapons_ranged_5_macro_options}\n@{repeating_weapons_ranged_5_macro}">
                   <span>Ranged</span>
                 </button>
               </div>
@@ -10352,6 +10452,12 @@
             <div class="sheet-col-1 sheet-center">
               <textarea class="sheet-xs-textarea" name="attr_repeating_weapons_ranged_5_emote"></textarea>
               <div class="sheet-small-label">Emote</div>
+            </div>
+          </div>
+          <div class="sheet-row sheet-toggle-macro sheet-mar-t-sm">
+            <div class="sheet-col-1 sheet-center">
+              <textarea class="sheet-xs-textarea" name="attr_repeating_weapons_ranged_5_macro"></textarea>
+              <div class="sheet-small-label">Macro</div>
             </div>
           </div>
           <div class="sheet-row sheet-mar-t-sm">
@@ -10464,13 +10570,14 @@
           <input type="checkbox" name="attr_repeating_weapons_ranged_6_toggle_crit" class="sheet-tab-action sheet-toggle-crit sheet-mar-t-md" value="@{repeating_weapons_ranged_6_var_crit}"><span class="sheet-tab-action sheet-toggle-crit sheet-mar-t-md">Crit</span>
           <input type="checkbox" name="attr_repeating_weapons_ranged_6_toggle_crit_bonus" class="sheet-tab-action sheet-toggle-crit-bonus sheet-mar-t-nine" value="@{repeating_weapons_ranged_6_var_crit_bonus}"><span class="sheet-tab-action sheet-toggle-crit-bonus sheet-mar-t-nine">Bonus</span>
           <input type="checkbox" name="attr_repeating_weapons_ranged_6_toggle_bonuses" class="sheet-tab-action sheet-toggle-bonuses" value="@{repeating_weapons_ranged_6_var_bonuses}"><span class="sheet-tab-action sheet-toggle-bonuses">Bonuses</span>
+          <input type="checkbox" name="attr_repeating_weapons_ranged_6_toggle_macro" class="sheet-tab-action sheet-toggle-macro" value="@{repeating_weapons_ranged_6_var_macro}"><span class="sheet-tab-action sheet-toggle-macro">Macro</span>
         
-          <input type="hidden" name="attr_repeating_weapons_ranged_6_macro_options" value="@{repeating_weapons_ranged_6_toggle_emote} @{repeating_weapons_ranged_6_toggle_attack} @{repeating_weapons_ranged_6_toggle_crit} @{repeating_weapons_ranged_6_toggle_range} @{repeating_weapons_ranged_6_toggle_damage} @{repeating_weapons_ranged_6_toggle_second_damage}">
+          <input type="hidden" name="attr_repeating_weapons_ranged_6_macro_options" value="@{repeating_weapons_ranged_6_toggle_emote} @{repeating_weapons_ranged_6_toggle_attack} @{repeating_weapons_ranged_6_toggle_crit} @{repeating_weapons_ranged_6_toggle_range} @{repeating_weapons_ranged_6_toggle_damage} @{repeating_weapons_ranged_6_toggle_second_damage} {{ammo=[[@{repeating_weapons_ranged_6_ammo} - 1]]}}">
         
           <div class="sheet-action-button-group sheet-right">
             <div class="sheet-row">
               <div class="sheet-col sheet-center sheet-vert-middle">
-                <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_6_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_6_name}}} {{ranged=1}} @{repeating_weapons_ranged_6_macro_options}">
+                <button type="roll" class="sheet-roll" name="roll_repeating_weapons_ranged_6_weapon" value="@{output_option} &{template:5eDefault} {{attack_roll=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{repeating_weapons_ranged_6_name}}} {{ranged=1}} @{repeating_weapons_ranged_6_macro_options}\n@{repeating_weapons_ranged_6_macro}">
                   <span>Ranged</span>
                 </button>
               </div>
@@ -10480,6 +10587,12 @@
             <div class="sheet-col-1 sheet-center">
               <textarea class="sheet-xs-textarea" name="attr_repeating_weapons_ranged_6_emote"></textarea>
               <div class="sheet-small-label">Emote</div>
+            </div>
+          </div>
+          <div class="sheet-row sheet-toggle-macro sheet-mar-t-sm">
+            <div class="sheet-col-1 sheet-center">
+              <textarea class="sheet-xs-textarea" name="attr_repeating_weapons_ranged_6_macro"></textarea>
+              <div class="sheet-small-label">Macro</div>
             </div>
           </div>
           <div class="sheet-row sheet-mar-t-sm">
@@ -10979,7 +11092,8 @@
       </div>
     </div>
   </div>
-  <div class="sheet-section-actions sheet-npc-version">
+
+  <div class="sheet-section-actions sheet-npc-version">
     <h4 class="sheet-center">Actions <span class="sheet-pictos">D</span></h4>
     <input type="checkbox" name="attr_toggle_regional_effects" class="sheet-tab-action-special-actions sheet-toggle-regional-effects"><span class="sheet-tab-action-special-actions sheet-toggle-regional-effects">Regional Effects</span>
     <input type="checkbox" name="attr_toggle_lair_actions" class="sheet-tab-action-special-actions sheet-toggle-lair-actions"><span class="sheet-tab-action-special-actions sheet-toggle-lair-actions">Lair Actions</span>
@@ -14599,7 +14713,8 @@
       </div>
     </div>
   </div>
-  <div class="sheet-section-spellbook">
+
+  <div class="sheet-section-spellbook">
     <input type="hidden" name="attr_base_spell_dc" value="(8 + (@{global_spell_dc_bonus}))">
   
     <input type="hidden" name="attr_arcane_trickster_spell_bonus" value="(@{intelligence_mod}+@{PB})">
@@ -14832,7 +14947,8 @@
               </div>
             </div>
           </div>
-          <div class="sheet-col-1-4 sheet-offset-1-20 sheet-general-bonuses sheet-center">            <div class="sheet-row sheet-sub-header">
+          <div class="sheet-col-1-4 sheet-offset-1-20 sheet-general-bonuses sheet-center">
+              <div class="sheet-row sheet-sub-header">
               <div class="sheet-col-1 sheet-center sheet-small-label sheet-sub-header">
                 <span class="sheet-english">Spellcasting</span>
                 <span class="sheet-german">Zauber</span>
@@ -20232,7 +20348,8 @@
     </div>
     <!-- endinject -->
   </div>
-  <div class="sheet-section-inventory sheet-pc-version">
+
+  <div class="sheet-section-inventory sheet-pc-version">
     <h4 class="sheet-center">
       <span class="sheet-english">Coin Carried </span>
       <span class="sheet-german">Münzen im Besitz </span>
@@ -20975,7 +21092,8 @@
     <textarea name="attr_notes"></textarea>
     <hr>
   </div>
-  <div class="sheet-section-armor sheet-pc-version">
+
+  <div class="sheet-section-armor sheet-pc-version">
     <div class="sheet-row">
       <div class="sheet-col-1">
         <h4 class="sheet-center sheet-relative">
@@ -21455,7 +21573,8 @@
     </div>
     <hr>
   </div>
-  <div class="sheet-section-settings">
+
+  <div class="sheet-section-settings">
     <div class="sheet-row">
       <div class="sheet-col-1-2 sheet-pad-r-lg">
         <div class="sheet-row">
@@ -21516,7 +21635,8 @@
       </div>
     </div>
   </div>
-  <div class="sheet-spacer-xl"></div>
+
+  <div class="sheet-spacer-xl"></div>
   
   <input class="sheet-tab-is-old-npc sheet-npc-version-inline-block" type="checkbox" name="attr_is_old_npc">
   <span class="sheet-tab-is-old-npc sheet-npc-version-inline-block"></span>
@@ -22770,7 +22890,8 @@
     <div class="sheet-col-1 sheet-small-label sheet-center">Changelog: https://github.com/mlenser/roll20-character-sheets/tree/master/D%26D_5e_Shaped</div>
     <div class="sheet-col-1 sheet-small-label sheet-center">Forum post: https://app.roll20.net/forum/post/1734923/new-d-and-d-5e-shaped-character-sheet</div>
   </div>
-</div><rolltemplate class="sheet-rolltemplate-5eDefault">
+</div>
+<rolltemplate class="sheet-rolltemplate-5eDefault">
   <div class="sheet-rt-card">
     <div class="sheet-rt-header sheet-relative {{#attack_roll}} sheet-attack{{/attack_roll}}{{#weapon}} sheet-weapon{{/weapon}}{{#action}} sheet-action{{/action}}{{#spell}} sheet-spell{{/spell}}{{#ability}} sheet-ability{{/ability}}{{#save}} sheet-save{{/save}}{{#deathsave}} sheet-deathsave{{/deathsave}}">
       <div class="sheet-rt-title sheet-pad-l-xl sheet-pad-r-xl">{{title}}</div>
@@ -22799,7 +22920,7 @@
         <div class="sheet-rt-subheader">{{#show_character_name}}{{character_name}} &bullet; {{/show_character_name}}Thrown {{#reach}} &bullet; {{reach}}{{/reach}}{{#range}} &bullet; {{range}}{{/range}}</div>
       {{/thrown}}
       {{#ranged}}
-      <div class="sheet-rt-subheader">{{#show_character_name}}{{character_name}} &bullet; {{/show_character_name}}Ranged {{#range}} &bullet; {{range}}{{/range}}</div>
+      <div class="sheet-rt-subheader">{{#show_character_name}}{{character_name}} &bullet; {{/show_character_name}}Ranged {{#range}} &bullet; {{range}}{{/range}} {{#rollGreater() ammo -1}} &bullet; Ammo {{ammo}}{{/rollGreater() ammo -1}}</div>
       {{/ranged}}
       {{#spell}}
         <div class="sheet-rt-subheader">{{#show_character_name}}{{character_name}} &bullet; {{/show_character_name}}{{spellfriendlylevel}}{{#spellschool}} &bullet; {{spellschool}}{{/spellschool}}{{#range}} &bullet; {{range}}{{/range}}</div>
@@ -22821,56 +22942,119 @@
     {{/emote}}
     <div class="sheet-main-content">
       <!--Weapon based attacks-->
-      {{#attack}}
-        <div class="sheet-row">
-          <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Attack</div>
-          <div class="sheet-col-15-24 sheet-pad-r-sm sheet-smaller-letter-spacing sheet-rt-value">{{attack}} | {{attackadv}} vs AC{{#targetAC}} {{targetAC}}{{/targetAC}}</div>
-        </div>
-      {{/attack}}
-      {{#damage}}
-        <div class="sheet-row">
-          <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Damage</div>
-          <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{damage}}</div>
-        </div>
-      {{/damage}}
-      {{#weapon}}
-        {{#rollWasCrit() attack}}
-          <div class="sheet-row">
-            <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit</div>
-            <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{critdamage}}</div>
-          </div>
-        {{/rollWasCrit() attack}}
-        {{#rollWasCrit() attackadv}}
-          <div class="sheet-row">
-            <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit (adv roll)</div>
-            <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{critdamage}} (if attack was made with advantage)</div>
-          </div>
-        {{/rollWasCrit() attackadv}}
-      {{/weapon}}
-
-      <!--Actions/Attacks-->
-      {{#action_damage}}
-        <div class="sheet-row">
-          <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Damage</div>
-          <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{action_damage}} {{action_damage_type}}{{#action_alt_damage}}, or {{action_alt_damage}} {{action_damage_type}}{{#action_alt_damage_reason}} {{action_alt_damage_reason}}{{/action_alt_damage_reason}}{{/action_alt_damage}}{{#action_second_damage}} + {{action_second_damage}} {{action_second_damage_type}}{{/action_second_damage}}</div>
-        </div>
-      {{/action_damage}}
-      {{#can_crit}}
+	  {{#melee}}
         {{#attack}}
+          <div class="sheet-row">
+            <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Attack</div>
+            <div class="sheet-col-15-24 sheet-pad-r-sm sheet-smaller-letter-spacing sheet-rt-value">{{attack}} | {{attackadv}} vs AC{{#targetAC}} {{targetAC}}{{/targetAC}}</div>
+          </div>
+        {{/attack}}
+        {{#damage}}
+          <div class="sheet-row">
+            <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Damage</div>
+            <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{damage}}</div>
+          </div>
+        {{/damage}}
+        {{#weapon}}
           {{#rollWasCrit() attack}}
             <div class="sheet-row">
-              <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit Dmg</div>
-              <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{action_crit_damage}} {{action_damage_type}}{{#action_alt_damage}}, or {{action_alt_crit_damage}} {{action_damage_type}}{{#action_alt_damage_reason}} {{action_alt_damage_reason}}{{/action_alt_damage_reason}}{{/action_alt_damage}}{{#action_second_damage}} + {{action_second_crit_damage}} {{action_second_damage_type}}{{/action_second_damage}}</div>
+              <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit</div>
+              <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{critdamage}}</div>
             </div>
           {{/rollWasCrit() attack}}
           {{#rollWasCrit() attackadv}}
             <div class="sheet-row">
-              <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit Dmg (adv roll)</div>
-              <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{action_crit_damage_adv}} {{action_damage_type}}{{#action_alt_damage}}, or {{action_alt_crit_damage_adv}} {{action_damage_type}}{{#action_alt_damage_reason}} {{action_alt_damage_reason}}{{/action_alt_damage_reason}}{{/action_alt_damage}}{{#action_second_damage}} + {{action_second_crit_damage_adv}} {{action_second_damage_type}}{{/action_second_damage}} <span class="sheet-small-label">(if attack was made with advantage)</span></div>
+              <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit (adv roll)</div>
+              <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{critdamage}} (if attack was made with advantage)</div>
             </div>
           {{/rollWasCrit() attackadv}}
-        {{/attack}}
-      {{/can_crit}}
+        {{/weapon}}
+	  {{/melee}}
+	  {{#ranged}}
+	    {{#rollGreater() ammo -1}}
+          {{#attack}}
+            <div class="sheet-row">
+              <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Attack</div>
+              <div class="sheet-col-15-24 sheet-pad-r-sm sheet-smaller-letter-spacing sheet-rt-value">{{attack}} | {{attackadv}} vs AC{{#targetAC}} {{targetAC}}{{/targetAC}}</div>
+            </div>
+          {{/attack}}
+          {{#damage}}
+            <div class="sheet-row">
+              <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Damage</div>
+              <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{damage}}</div>
+            </div>
+          {{/damage}}
+          {{#weapon}}
+            {{#rollWasCrit() attack}}
+              <div class="sheet-row">
+                <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit</div>
+                <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{critdamage}}</div>
+              </div>
+            {{/rollWasCrit() attack}}
+            {{#rollWasCrit() attackadv}}
+              <div class="sheet-row">
+                <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit (adv roll)</div>
+                <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{critdamage}} (if attack was made with advantage)</div>
+              </div>
+            {{/rollWasCrit() attackadv}}
+          {{/weapon}}
+	    {{/rollGreater() ammo -1}}
+	  {{/ranged}}
+	  {{#rollLess() ammo 0}}
+        <div class="sheet-row">
+          <div class="sheet-col-1 sheet-pad-l-md sheet-pad-r-md sheet-rt-key sheet-center">Out of Ammunition!</div>
+		</div>
+	  {{/rollLess() ammo 0}}
+
+      <!--Actions/Attacks-->
+	  {{#melee}}
+        {{#action_damage}}
+          <div class="sheet-row">
+            <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Damage</div>
+            <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{action_damage}} {{action_damage_type}}{{#action_alt_damage}}, or {{action_alt_damage}} {{action_damage_type}}{{#action_alt_damage_reason}} {{action_alt_damage_reason}}{{/action_alt_damage_reason}}{{/action_alt_damage}}{{#action_second_damage}} + {{action_second_damage}} {{action_second_damage_type}}{{/action_second_damage}}</div>
+          </div>
+        {{/action_damage}}
+        {{#can_crit}}
+          {{#attack}}
+            {{#rollWasCrit() attack}}
+              <div class="sheet-row">
+                <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit Dmg</div>
+                <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{action_crit_damage}} {{action_damage_type}}{{#action_alt_damage}}, or {{action_alt_crit_damage}} {{action_damage_type}}{{#action_alt_damage_reason}} {{action_alt_damage_reason}}{{/action_alt_damage_reason}}{{/action_alt_damage}}{{#action_second_damage}} + {{action_second_crit_damage}} {{action_second_damage_type}}{{/action_second_damage}}</div>
+              </div>
+            {{/rollWasCrit() attack}}
+            {{#rollWasCrit() attackadv}}
+              <div class="sheet-row">
+                <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit Dmg (adv roll)</div>
+                <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{action_crit_damage_adv}} {{action_damage_type}}{{#action_alt_damage}}, or {{action_alt_crit_damage_adv}} {{action_damage_type}}{{#action_alt_damage_reason}} {{action_alt_damage_reason}}{{/action_alt_damage_reason}}{{/action_alt_damage}}{{#action_second_damage}} + {{action_second_crit_damage_adv}} {{action_second_damage_type}}{{/action_second_damage}} <span class="sheet-small-label">(if attack was made with advantage)</span></div>
+              </div>
+            {{/rollWasCrit() attackadv}}
+          {{/attack}}
+        {{/can_crit}}
+	  {{/melee}}
+	  {{#ranged}}{{#rollGreater() ammo -1}}
+        {{#action_damage}}
+          <div class="sheet-row">
+            <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Damage</div>
+            <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{action_damage}} {{action_damage_type}}{{#action_alt_damage}}, or {{action_alt_damage}} {{action_damage_type}}{{#action_alt_damage_reason}} {{action_alt_damage_reason}}{{/action_alt_damage_reason}}{{/action_alt_damage}}{{#action_second_damage}} + {{action_second_damage}} {{action_second_damage_type}}{{/action_second_damage}}</div>
+          </div>
+        {{/action_damage}}
+        {{#can_crit}}
+          {{#attack}}
+            {{#rollWasCrit() attack}}
+              <div class="sheet-row">
+                <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit Dmg</div>
+                <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{action_crit_damage}} {{action_damage_type}}{{#action_alt_damage}}, or {{action_alt_crit_damage}} {{action_damage_type}}{{#action_alt_damage_reason}} {{action_alt_damage_reason}}{{/action_alt_damage_reason}}{{/action_alt_damage}}{{#action_second_damage}} + {{action_second_crit_damage}} {{action_second_damage_type}}{{/action_second_damage}}</div>
+              </div>
+            {{/rollWasCrit() attack}}
+            {{#rollWasCrit() attackadv}}
+              <div class="sheet-row">
+                <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit Dmg (adv roll)</div>
+                <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{action_crit_damage_adv}} {{action_damage_type}}{{#action_alt_damage}}, or {{action_alt_crit_damage_adv}} {{action_damage_type}}{{#action_alt_damage_reason}} {{action_alt_damage_reason}}{{/action_alt_damage_reason}}{{/action_alt_damage}}{{#action_second_damage}} + {{action_second_crit_damage_adv}} {{action_second_damage_type}}{{/action_second_damage}} <span class="sheet-small-label">(if attack was made with advantage)</span></div>
+              </div>
+            {{/rollWasCrit() attackadv}}
+          {{/attack}}
+        {{/can_crit}}
+	  {{/rollGreater() ammo -1}}{{/ranged}}
       {{#save_dc}}
         <div class="sheet-row">
           <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Save</div>
@@ -23091,6 +23275,88 @@
           </div>
         {{/allprops() outputall title subheader subheaderright subheader2 subheaderright2 emote weapon spell ability save deathsave targetAC}}
       {{/outputall}}
+	  
+	  <!--StatBlock-->
+      {{#rollTotal() NPCTraits 1}}
+		  {{#AC}}
+			<div class="sheet-row">
+			  <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">AC</div>
+			  <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{AC}}{{#ACNotes}}, {{ACNotes}}{{/ACNotes}}</div>
+			</div>
+		  {{/AC}}
+      {{/rollTotal() NPCTraits 1}}
+      {{#rollTotal() NPCTraits 0}}
+		  {{#PCAC}}
+			<div class="sheet-row">
+			  <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">AC</div>
+			  <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{PCAC}}</div>
+			</div>
+		  {{/PCAC}}
+      {{/rollTotal() NPCTraits 0}}
+      {{#HP}}
+        <div class="sheet-row">
+          <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Hit Points</div>
+          <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{HP}}{{#HPMax}}/{{HPMax}}{{/HPMax}}{{#HitDice}} ({{HitDice}}){{/HitDice}}</div>
+        </div>
+	  {{/HP}}
+	  {{#Speed}}
+        <div class="sheet-row">
+          <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Speed</div>
+          <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{Speed}} ft.{{#Fly}}, fly {{Fly}} ft.{{/Fly}}{{#Climb}}, climb {{Climb}} ft.{{/Climb}}{{#Swim}}, swim {{Swim}} ft.{{/Swim}}{{#Burrow}}, burrow {{Burrow}} ft.{{/Burrow}}</div>
+        </div>
+	  {{/Speed}}
+      {{#Resistance}}
+        <div class="sheet-row">
+          <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Resists</div>
+          <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{Resistance}}</div>
+        </div>
+      {{/Resistance}}
+      {{#Vulnerability}}
+        <div class="sheet-row">
+          <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Vuln.</div>
+          <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{Vulnerability}}</div>
+        </div>
+      {{/Vulnerability}}
+      {{#Immunity}}
+        <div class="sheet-row">
+          <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Immunities</div>
+          <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{Immunity}}</div>
+        </div>
+      {{/Immunity}}
+      {{#CondImmunity}}
+        <div class="sheet-row">
+          <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Cond. Imm.</div>
+          <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{CondImmunity}}</div>
+        </div>
+      {{/CondImmunity}}
+      {{#PassivePerception}}
+      <div class="sheet-row">
+        <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Senses</div>
+        <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">passive Perception {{PassivePerception}}{{#Darkvision}}, darkvision {{Darkvision}} ft.{{/Darkvision}}{{#Blindsight}}, blindsight {{Blindsight}} ft.{{/Blindsight}}{{#Tremorsense}}, tremorsense {{Tremorsense}} ft.{{/Tremorsense}}{{#Truesight}}, truesight {{Truesight}} ft.{{/Truesight}}</div>
+      </div>
+      {{/PassivePerception}}
+      {{#Languages}}
+        <div class="sheet-row">
+          <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Languages</div>
+          <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{Languages}}</div>
+        </div>
+      {{/Languages}}
+      {{#rollTotal() NPCTraits 1}}
+        {{#Challenge}}
+          <div class="sheet-row">
+            <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Challenge</div>
+            <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{Challenge}}{{#XP}} ({{XP}} XP){{/XP}}</div>
+          </div>
+        {{/Challenge}}
+        <div class="sheet-row">
+          <div class="sheet-col-1 sheet-pad-l-md sheet-pad-r-sm sheet-rt-value">{{Traits}}</div>
+        </div>
+      {{/rollTotal() NPCTraits 1}}
+      {{#rollTotal() NPCTraits 0}}
+        <div class="sheet-row">
+          <div class="sheet-col-1 sheet-pad-l-md sheet-pad-r-sm sheet-rt-value">{{RacialTraits}}</div>
+        </div>
+      {{/rollTotal() NPCTraits 0}}
     </div>
   </div>
 </rolltemplate>
