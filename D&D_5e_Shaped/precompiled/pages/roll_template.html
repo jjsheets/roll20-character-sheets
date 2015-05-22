@@ -49,56 +49,124 @@
     {{/emote}}
     <div class="sheet-main-content">
       <!--Weapon based attacks-->
-      {{#attack}}
-        <div class="sheet-row">
-          <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Attack</div>
-          <div class="sheet-col-15-24 sheet-pad-r-sm sheet-smaller-letter-spacing sheet-rt-value">{{attack}} | {{attackadv}} vs AC{{#targetAC}} {{targetAC}}{{/targetAC}}</div>
-        </div>
-      {{/attack}}
-      {{#damage}}
-        <div class="sheet-row">
-          <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Damage</div>
-          <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{damage}}</div>
-        </div>
-      {{/damage}}
-      {{#weapon}}
-        {{#rollWasCrit() attack}}
-          <div class="sheet-row">
-            <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit</div>
-            <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{critdamage}}</div>
-          </div>
-        {{/rollWasCrit() attack}}
-        {{#rollWasCrit() attackadv}}
-          <div class="sheet-row">
-            <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit (adv roll)</div>
-            <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{critdamage}} (if attack was made with advantage)</div>
-          </div>
-        {{/rollWasCrit() attackadv}}
-      {{/weapon}}
-
-      <!--Actions/Attacks-->
-      {{#action_damage}}
-        <div class="sheet-row">
-          <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Damage</div>
-          <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{action_damage}} {{action_damage_type}}{{#action_alt_damage}}, or {{action_alt_damage}} {{action_damage_type}}{{#action_alt_damage_reason}} {{action_alt_damage_reason}}{{/action_alt_damage_reason}}{{/action_alt_damage}}{{#action_second_damage}} + {{action_second_damage}} {{action_second_damage_type}}{{/action_second_damage}}</div>
-        </div>
-      {{/action_damage}}
-      {{#can_crit}}
+	  {{#melee}}
         {{#attack}}
+          <div class="sheet-row">
+            <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Attack</div>
+            <div class="sheet-col-15-24 sheet-pad-r-sm sheet-smaller-letter-spacing sheet-rt-value">{{attack}} | {{attackadv}} vs AC{{#targetAC}} {{targetAC}}{{/targetAC}}</div>
+          </div>
+        {{/attack}}
+        {{#damage}}
+          <div class="sheet-row">
+            <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Damage</div>
+            <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{damage}}</div>
+          </div>
+        {{/damage}}
+        {{#weapon}}
           {{#rollWasCrit() attack}}
             <div class="sheet-row">
-              <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit Dmg</div>
-              <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{action_crit_damage}} {{action_damage_type}}{{#action_alt_damage}}, or {{action_alt_crit_damage}} {{action_damage_type}}{{#action_alt_damage_reason}} {{action_alt_damage_reason}}{{/action_alt_damage_reason}}{{/action_alt_damage}}{{#action_second_damage}} + {{action_second_crit_damage}} {{action_second_damage_type}}{{/action_second_damage}}</div>
+              <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit</div>
+              <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{critdamage}}</div>
             </div>
           {{/rollWasCrit() attack}}
           {{#rollWasCrit() attackadv}}
             <div class="sheet-row">
-              <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit Dmg (adv roll)</div>
-              <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{action_crit_damage_adv}} {{action_damage_type}}{{#action_alt_damage}}, or {{action_alt_crit_damage_adv}} {{action_damage_type}}{{#action_alt_damage_reason}} {{action_alt_damage_reason}}{{/action_alt_damage_reason}}{{/action_alt_damage}}{{#action_second_damage}} + {{action_second_crit_damage_adv}} {{action_second_damage_type}}{{/action_second_damage}} <span class="sheet-small-label">(if attack was made with advantage)</span></div>
+              <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit (adv roll)</div>
+              <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{critdamage}} (if attack was made with advantage)</div>
             </div>
           {{/rollWasCrit() attackadv}}
-        {{/attack}}
-      {{/can_crit}}
+        {{/weapon}}
+	  {{/melee}}
+	  {{#ranged}}
+	    {{#rollGreater() ammo 0}}
+          {{#attack}}
+            <div class="sheet-row">
+              <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Attack</div>
+              <div class="sheet-col-15-24 sheet-pad-r-sm sheet-smaller-letter-spacing sheet-rt-value">{{attack}} | {{attackadv}} vs AC{{#targetAC}} {{targetAC}}{{/targetAC}}</div>
+            </div>
+          {{/attack}}
+          {{#damage}}
+            <div class="sheet-row">
+              <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Damage</div>
+              <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{damage}}</div>
+            </div>
+          {{/damage}}
+          {{#weapon}}
+            {{#rollWasCrit() attack}}
+              <div class="sheet-row">
+                <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit</div>
+                <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{critdamage}}</div>
+              </div>
+            {{/rollWasCrit() attack}}
+            {{#rollWasCrit() attackadv}}
+              <div class="sheet-row">
+                <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit (adv roll)</div>
+                <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{critdamage}} (if attack was made with advantage)</div>
+              </div>
+            {{/rollWasCrit() attackadv}}
+          {{/weapon}}
+          <div class="sheet-row">
+            <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Ammo</div>
+            <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{ammo}}</div>
+          </div>
+	    {{/rollGreater() ammo 0}}
+	    {{#rollLess() ammo 1}}
+          <div class="sheet-row">
+            <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Ammo</div>
+            <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">Out of Ammo!</div>
+          </div>
+	    {{/rollLess() ammo 1}}
+	  {{/ranged}}
+
+      <!--Actions/Attacks-->
+	  {{#melee}}
+        {{#action_damage}}
+          <div class="sheet-row">
+            <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Damage</div>
+            <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{action_damage}} {{action_damage_type}}{{#action_alt_damage}}, or {{action_alt_damage}} {{action_damage_type}}{{#action_alt_damage_reason}} {{action_alt_damage_reason}}{{/action_alt_damage_reason}}{{/action_alt_damage}}{{#action_second_damage}} + {{action_second_damage}} {{action_second_damage_type}}{{/action_second_damage}}</div>
+          </div>
+        {{/action_damage}}
+        {{#can_crit}}
+          {{#attack}}
+            {{#rollWasCrit() attack}}
+              <div class="sheet-row">
+                <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit Dmg</div>
+                <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{action_crit_damage}} {{action_damage_type}}{{#action_alt_damage}}, or {{action_alt_crit_damage}} {{action_damage_type}}{{#action_alt_damage_reason}} {{action_alt_damage_reason}}{{/action_alt_damage_reason}}{{/action_alt_damage}}{{#action_second_damage}} + {{action_second_crit_damage}} {{action_second_damage_type}}{{/action_second_damage}}</div>
+              </div>
+            {{/rollWasCrit() attack}}
+            {{#rollWasCrit() attackadv}}
+              <div class="sheet-row">
+                <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit Dmg (adv roll)</div>
+                <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{action_crit_damage_adv}} {{action_damage_type}}{{#action_alt_damage}}, or {{action_alt_crit_damage_adv}} {{action_damage_type}}{{#action_alt_damage_reason}} {{action_alt_damage_reason}}{{/action_alt_damage_reason}}{{/action_alt_damage}}{{#action_second_damage}} + {{action_second_crit_damage_adv}} {{action_second_damage_type}}{{/action_second_damage}} <span class="sheet-small-label">(if attack was made with advantage)</span></div>
+              </div>
+            {{/rollWasCrit() attackadv}}
+          {{/attack}}
+        {{/can_crit}}
+	  {{/melee}}
+	  {{#ranged}}{{#rollGreater() ammo 0}}
+        {{#action_damage}}
+          <div class="sheet-row">
+            <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Damage</div>
+            <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{action_damage}} {{action_damage_type}}{{#action_alt_damage}}, or {{action_alt_damage}} {{action_damage_type}}{{#action_alt_damage_reason}} {{action_alt_damage_reason}}{{/action_alt_damage_reason}}{{/action_alt_damage}}{{#action_second_damage}} + {{action_second_damage}} {{action_second_damage_type}}{{/action_second_damage}}</div>
+          </div>
+        {{/action_damage}}
+        {{#can_crit}}
+          {{#attack}}
+            {{#rollWasCrit() attack}}
+              <div class="sheet-row">
+                <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit Dmg</div>
+                <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{action_crit_damage}} {{action_damage_type}}{{#action_alt_damage}}, or {{action_alt_crit_damage}} {{action_damage_type}}{{#action_alt_damage_reason}} {{action_alt_damage_reason}}{{/action_alt_damage_reason}}{{/action_alt_damage}}{{#action_second_damage}} + {{action_second_crit_damage}} {{action_second_damage_type}}{{/action_second_damage}}</div>
+              </div>
+            {{/rollWasCrit() attack}}
+            {{#rollWasCrit() attackadv}}
+              <div class="sheet-row">
+                <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit Dmg (adv roll)</div>
+                <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{action_crit_damage_adv}} {{action_damage_type}}{{#action_alt_damage}}, or {{action_alt_crit_damage_adv}} {{action_damage_type}}{{#action_alt_damage_reason}} {{action_alt_damage_reason}}{{/action_alt_damage_reason}}{{/action_alt_damage}}{{#action_second_damage}} + {{action_second_crit_damage_adv}} {{action_second_damage_type}}{{/action_second_damage}} <span class="sheet-small-label">(if attack was made with advantage)</span></div>
+              </div>
+            {{/rollWasCrit() attackadv}}
+          {{/attack}}
+        {{/can_crit}}
+	  {{/rollGreater() ammo 0}}{{/ranged}}
       {{#save_dc}}
         <div class="sheet-row">
           <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Save</div>
