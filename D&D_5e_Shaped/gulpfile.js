@@ -104,7 +104,7 @@ function skills (file) {
 }
 
 gulp.task('default', function() {
-	gulp.src('precompiled/D&D_5e.html')
+	gulp.src('precompiled/DnD_5e.html')
 		.pipe( include() )
 		.pipe( inject(gulp.src(['precompiled/components/skills/skill.html']), {
 			starttag: '<!-- inject:skills:{{ext}} -->',
