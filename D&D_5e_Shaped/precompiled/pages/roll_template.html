@@ -49,32 +49,70 @@
     {{/emote}}
     <div class="sheet-main-content">
       <!--Weapon based attacks-->
-      {{#attack}}
-        <div class="sheet-row">
-          <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Attack</div>
-          <div class="sheet-col-15-24 sheet-pad-r-sm sheet-smaller-letter-spacing sheet-rt-value">{{attack}} | {{attackadv}} vs AC{{#targetAC}} {{targetAC}}{{/targetAC}}</div>
-        </div>
-      {{/attack}}
-      {{#damage}}
-        <div class="sheet-row">
-          <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Damage</div>
-          <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{damage}}</div>
-        </div>
-      {{/damage}}
-      {{#weapon}}
-        {{#rollWasCrit() attack}}
+	  {{#melee}}
+        {{#attack}}
           <div class="sheet-row">
-            <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit</div>
-            <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{critdamage}}</div>
+            <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Attack</div>
+            <div class="sheet-col-15-24 sheet-pad-r-sm sheet-smaller-letter-spacing sheet-rt-value">{{attack}} | {{attackadv}} vs AC{{#targetAC}} {{targetAC}}{{/targetAC}}</div>
           </div>
-        {{/rollWasCrit() attack}}
-        {{#rollWasCrit() attackadv}}
+        {{/attack}}
+        {{#damage}}
           <div class="sheet-row">
-            <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit (adv roll)</div>
-            <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{critdamage}} (if attack was made with advantage)</div>
+            <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Damage</div>
+            <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{damage}}</div>
           </div>
-        {{/rollWasCrit() attackadv}}
-      {{/weapon}}
+        {{/damage}}
+        {{#weapon}}
+          {{#rollWasCrit() attack}}
+            <div class="sheet-row">
+              <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit</div>
+              <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{critdamage}}</div>
+            </div>
+          {{/rollWasCrit() attack}}
+          {{#rollWasCrit() attackadv}}
+            <div class="sheet-row">
+              <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit (adv roll)</div>
+              <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{critdamage}} (if attack was made with advantage)</div>
+            </div>
+          {{/rollWasCrit() attackadv}}
+        {{/weapon}}
+	  {{/melee}}
+	  {{#ranged}}
+	    {{#rollGreater() ammo 0}}
+          {{#attack}}
+            <div class="sheet-row">
+              <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Attack</div>
+              <div class="sheet-col-15-24 sheet-pad-r-sm sheet-smaller-letter-spacing sheet-rt-value">{{attack}} | {{attackadv}} vs AC{{#targetAC}} {{targetAC}}{{/targetAC}}</div>
+            </div>
+          {{/attack}}
+          {{#damage}}
+            <div class="sheet-row">
+              <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Damage</div>
+              <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{damage}}</div>
+            </div>
+          {{/damage}}
+          {{#weapon}}
+            {{#rollWasCrit() attack}}
+              <div class="sheet-row">
+                <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit</div>
+                <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{critdamage}}</div>
+              </div>
+            {{/rollWasCrit() attack}}
+            {{#rollWasCrit() attackadv}}
+              <div class="sheet-row">
+                <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Crit (adv roll)</div>
+                <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{critdamage}} (if attack was made with advantage)</div>
+              </div>
+            {{/rollWasCrit() attackadv}}
+          {{/weapon}}
+	    {{/rollGreater() ammo 0}}
+	    {{#rollLess() ammo 1}}
+          <div class="sheet-row">
+            <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Ammunition</div>
+            <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">Out of Ammo!</div>
+          </div>
+	    {{/rollLess() ammo 1}}
+	  {{/ranged}}
 
       <!--Actions/Attacks-->
       {{#action_damage}}
