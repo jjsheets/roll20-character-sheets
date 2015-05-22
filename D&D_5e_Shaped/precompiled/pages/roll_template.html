@@ -27,7 +27,7 @@
         <div class="sheet-rt-subheader">{{#show_character_name}}{{character_name}} &bullet; {{/show_character_name}}Thrown {{#reach}} &bullet; {{reach}}{{/reach}}{{#range}} &bullet; {{range}}{{/range}}</div>
       {{/thrown}}
       {{#ranged}}
-      <div class="sheet-rt-subheader">{{#show_character_name}}{{character_name}} &bullet; {{/show_character_name}}Ranged {{#range}} &bullet; {{range}}{{/range}} {{#ammo}} &bullet; Ammo {{ammo}}{{/ammo}}</div>
+      <div class="sheet-rt-subheader">{{#show_character_name}}{{character_name}} &bullet; {{/show_character_name}}Ranged {{#range}} &bullet; {{range}}{{/range}} {{#rollGreater() ammo -1}} &bullet; Ammo {{ammo}}{{/rollGreater() ammo -1}}</div>
       {{/ranged}}
       {{#spell}}
         <div class="sheet-rt-subheader">{{#show_character_name}}{{character_name}} &bullet; {{/show_character_name}}{{spellfriendlylevel}}{{#spellschool}} &bullet; {{spellschool}}{{/spellschool}}{{#range}} &bullet; {{range}}{{/range}}</div>
@@ -107,6 +107,9 @@
           {{/weapon}}
 	    {{/rollGreater() ammo -1}}
 	  {{/ranged}}
+	  {{#rollLess() ammo 0}}
+        <div class="sheet-row">Out of Ammunition!</div>
+	  {{/rollLess() ammo 0}}
 
       <!--Actions/Attacks-->
 	  {{#melee}}
