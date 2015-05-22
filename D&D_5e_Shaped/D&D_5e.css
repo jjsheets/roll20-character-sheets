@@ -744,6 +744,14 @@ input[type=number].sheet-initiative-bonus {
   box-shadow: 0 2px 0 rgba(0,0,0,.3);
 }
 
+.sheet-rolltemplate-5eDefault .sheet-rt-header  .inlinerollresult {
+  background-color: transparent;
+  border: 0px;
+  padding: 0px;
+  font-weight: normal;
+  font-size: 100%;
+}
+
 .sheet-rolltemplate-5eDefault .sheet-rt-header:before,
 .sheet-rolltemplate-5eDefault .sheet-rt-header:after {
   content: '';

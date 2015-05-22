@@ -78,7 +78,7 @@
         {{/weapon}}
 	  {{/melee}}
 	  {{#ranged}}
-	    {{#rollGreater() ammo 0}}
+	    {{#rollGreater() ammo -1}}
           {{#attack}}
             <div class="sheet-row">
               <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Attack</div>
@@ -105,7 +105,7 @@
               </div>
             {{/rollWasCrit() attackadv}}
           {{/weapon}}
-	    {{/rollGreater() ammo 0}}
+	    {{/rollGreater() ammo -1}}
 	  {{/ranged}}
 
       <!--Actions/Attacks-->
@@ -133,7 +133,7 @@
           {{/attack}}
         {{/can_crit}}
 	  {{/melee}}
-	  {{#ranged}}{{#rollGreater() ammo 0}}
+	  {{#ranged}}{{#rollGreater() ammo -1}}
         {{#action_damage}}
           <div class="sheet-row">
             <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Damage</div>
@@ -156,7 +156,7 @@
             {{/rollWasCrit() attackadv}}
           {{/attack}}
         {{/can_crit}}
-	  {{/rollGreater() ammo 0}}{{/ranged}}
+	  {{/rollGreater() ammo -1}}{{/ranged}}
       {{#save_dc}}
         <div class="sheet-row">
           <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Save</div>
