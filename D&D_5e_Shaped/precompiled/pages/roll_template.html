@@ -27,7 +27,7 @@
         <div class="sheet-rt-subheader">{{#show_character_name}}{{character_name}} &bullet; {{/show_character_name}}Thrown {{#reach}} &bullet; {{reach}}{{/reach}}{{#range}} &bullet; {{range}}{{/range}}</div>
       {{/thrown}}
       {{#ranged}}
-      <div class="sheet-rt-subheader">{{#show_character_name}}{{character_name}} &bullet; {{/show_character_name}}Ranged {{#range}} &bullet; {{range}}{{/range}}</div>
+      <div class="sheet-rt-subheader">{{#show_character_name}}{{character_name}} &bullet; {{/show_character_name}}Ranged {{#range}} &bullet; {{range}}{{/range}} {{#ammo}} &bullet; Ammo {{ammo}}{{/ammo}}</div>
       {{/ranged}}
       {{#spell}}
         <div class="sheet-rt-subheader">{{#show_character_name}}{{character_name}} &bullet; {{/show_character_name}}{{spellfriendlylevel}}{{#spellschool}} &bullet; {{spellschool}}{{/spellschool}}{{#range}} &bullet; {{range}}{{/range}}</div>
@@ -105,17 +105,7 @@
               </div>
             {{/rollWasCrit() attackadv}}
           {{/weapon}}
-          <div class="sheet-row">
-            <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Ammo</div>
-            <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{ammo}}</div>
-          </div>
 	    {{/rollGreater() ammo 0}}
-	    {{#rollLess() ammo 1}}
-          <div class="sheet-row">
-            <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Ammo</div>
-            <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">Out of Ammo!</div>
-          </div>
-	    {{/rollLess() ammo 1}}
 	  {{/ranged}}
 
       <!--Actions/Attacks-->
