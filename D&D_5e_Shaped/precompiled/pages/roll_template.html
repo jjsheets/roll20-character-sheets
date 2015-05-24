@@ -49,7 +49,7 @@
     {{/emote}}
     <div class="sheet-main-content">
       <!--Weapon based attacks-->
-	  {{#melee}}
+	  {{^ranged}}
         {{#attack}}
           <div class="sheet-row">
             <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Attack</div>
@@ -76,7 +76,7 @@
             </div>
           {{/rollWasCrit() attackadv}}
         {{/weapon}}
-	  {{/melee}}
+	  {{/ranged}}
 	  {{#ranged}}
 	    {{#rollGreater() ammo -1}}
           {{#attack}}
@@ -114,7 +114,7 @@
 	  {{/rollLess() ammo 0}}
 
       <!--Actions/Attacks-->
-	  {{#melee}}
+	  {{^ranged}}
         {{#action_damage}}
           <div class="sheet-row">
             <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Damage</div>
@@ -137,7 +137,7 @@
             {{/rollWasCrit() attackadv}}
           {{/attack}}
         {{/can_crit}}
-	  {{/melee}}
+	  {{/ranged}}
 	  {{#ranged}}{{#rollGreater() ammo -1}}
         {{#action_damage}}
           <div class="sheet-row">
@@ -176,13 +176,12 @@
       {{/save_damage}}
       {{#save_success}}
         <div class="sheet-row">
-          <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Save success</div>
-          <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{save_success}}</div>
+          <div class="sheet-col-1 sheet-pad-l-md sheet-pad-r-sm sheet-rt-value">{{save_success}}</div>
         </div>
       {{/save_success}}
       {{#effects}}
         <div class="sheet-row">
-          <div class="sheet-col-1 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Spell Effects</div>
+          <div class="sheet-col-1 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Effects</div>
           <div class="sheet-col-1 sheet-pad-l-md sheet-pad-r-md sheet-rt-value">{{effects}}</div>
         </div>
       {{/effects}}
@@ -261,8 +260,7 @@
       {{/spelleffect}}
       {{#spellsavesuccess}}
         <div class="sheet-row">
-          <div class="sheet-col-9-24 sheet-pad-l-md sheet-pad-r-md sheet-rt-key">Save success</div>
-          <div class="sheet-col-15-24 sheet-pad-r-sm sheet-rt-value">{{spellsavesuccess}}</div>
+          <div class="sheet-col-1 sheet-pad-l-md sheet-pad-r-md sheet-rt-value">{{spellsavesuccess}}</div>
         </div>
       {{/spellsavesuccess}}
       {{#spellhigherlevel}}
